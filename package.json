@@ -1,0 +1,32 @@
+{
+  "name": "fear-board",
+  "version": "1.0.0",
+  "description": "A visual dashboard containing data about peoples fears.",
+  "main": "main.js",
+  "scripts": {
+    "test": "fear-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildPastry/Fear-Board.git"
+  },
+  "keywords": [
+    "fear",
+    "students",
+    "NZ",
+    "questions",
+    "data",
+    "intuitive",
+    "design",
+    "visual"
+  ],
+  "author": "Michael Parker",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/WildPastry/Fear-Board/issues"
+  },
+  "homepage": "https://github.com/WildPastry/Fear-Board#readme",
+  "dependencies": {
+    "gulp": "^4.0.0"
+  }
+}

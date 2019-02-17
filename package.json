@@ -29,6 +29,7 @@
   "homepage": "https://github.com/WildPastry/Fear-Board#readme",
   "dependencies": {
     "del": "^3.0.0",
+    "event-stream": "^3.3.4",
     "gulp": "^4.0.0",
     "gulp-cache": "^1.1.1",
     "gulp-connect": "^5.7.0",

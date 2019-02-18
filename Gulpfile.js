@@ -27,7 +27,10 @@ gulp.task('serve', function (event) {
 // LESS
 gulp.task('less', function () {
   return gulp.src('src/less/**/*.less')
-    .pipe(less())
+    .pipe(less({  paths: [
+      '.',
+      './node_modules/bootstrap-less'
+  ]}))
     .pipe(gulp.dest('src/css'))
     .pipe(connect.reload());
 });
@@ -49,7 +52,7 @@ gulp.task('htmlv', function () {
 gulp.task('lint', function() {
 	return gulp.src('src/js/app.js')
 		.pipe(jshint())
-		.pipe(jshint.reporter('jshint-stylish'))
+		.pipe(jshint.reporter('default'))
 		.pipe(connect.reload());
 });
 

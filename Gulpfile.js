@@ -1,5 +1,6 @@
 // INSTALL PLUGINS
 var gulp = require('gulp');
+concat = require('gulp-concat'),
 less = require('gulp-less');
 livereload = require('gulp-livereload');
 connect = require('gulp-connect');
@@ -25,13 +26,24 @@ gulp.task('serve', function (event) {
 });
 
 // LESS
+// gulp.task('less', function () {
+//   return gulp.src('src/less/**/*.less')
+//     .pipe(less({  paths: [
+//       '.',
+//       './node_modules/bootstrap-less'
+//   ]}))
+//     .pipe(gulp.dest('src/css'))
+//     .pipe(connect.reload());
+// });
+
+// LESS
 gulp.task('less', function () {
   return gulp.src('src/less/**/*.less')
+  .pipe(concat('main'))
     .pipe(less({  paths: [
-      '.',
-      './node_modules/bootstrap-less'
-  ]}))
-    .pipe(gulp.dest('src/css'))
+            './node_modules/bootstrap-less'
+        ]}))
+    .pipe(gulp.dest('src/css/'))
     .pipe(connect.reload());
 });
 
@@ -43,17 +55,19 @@ gulp.task('html', function () {
 
 // HTML VALIDATION
 gulp.task('htmlv', function () {
- return gulp.src('src/*.html')
-    .pipe(htmlv({format: 'html'}))
+  return gulp.src('src/*.html')
+    .pipe(htmlv({
+      format: 'html'
+    }))
     .pipe(gulp.dest('./error'));
 });
 
 // JSHINT
-gulp.task('lint', function() {
-	return gulp.src('src/js/app.js')
-		.pipe(jshint())
-		.pipe(jshint.reporter('default'))
-		.pipe(connect.reload());
+gulp.task('lint', function () {
+  return gulp.src('src/js/app.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(connect.reload());
 });
 
 // SCRIPT BUILD
@@ -99,11 +113,16 @@ gulp.task('useref', function () {
 
 //WATCHERS
 gulp.task('watch', function (event) {
-  gulp.watch('src/scss/**/*.less', gulp.series('less'));
+  gulp.watch('src/less/**/*.less', gulp.series('less'));
   gulp.watch('src/*.html', gulp.series('html'));
   gulp.watch('src/js/*.js', gulp.series('lint'));
   event();
 });
+
+/* Task to watch less changes */
+// gulp.task('watch-less', function() {  
+//   gulp.watch('./src/**/*.less' , ['less']);
+// });
 
 //LOAD
 gulp.task('default',
@@ -129,3 +148,36 @@ gulp.task(
     gulp.parallel('less', 'useref', 'images', 'script', 'fonts', 'frameworkjs', 'frameworkcss')
   )
 );
+
+// var gulp,
+//     sass,
+//     merge,
+//     concat,
+//     rename;
+
+// //load dependencies
+// gulp = require('gulp');
+// sass = require('gulp-sass');
+// merge = require('merge-stream');
+// concat = require('gulp-concat');
+// rename = require('gulp-rename');
+
+// //define default task
+// gulp.task('default', function () {
+//     var sassStream,
+//         cssStream;
+
+//     //compile sass
+//     sassStream = gulp.src('app.scss')
+//         .pipe(sass({
+//             errLogToConsole: true
+//         }));
+
+//     //select additional css files
+//     cssStream = gulp.src('animate.css');
+
+//     //merge the two streams and concatenate their contents into a single file
+//     return merge(sassStream, cssStream)
+//         .pipe(concat('app.css'))
+//         .pipe(gulp.dest(paths.public + 'css/'));
+// });

@@ -1,0 +1,63 @@
+// LESS
+// MIXINS
+// IMPORT VARIABLES
+@import 'variables';
+
+// CSS RESETS
+// @mixin reset (@pad: null, @mar: null, @box: null, @deco: null, @listo: null) {
+//     padding: @pad;
+//     margin: @mar;
+//     box-sizing: @box;
+//     text-decoration: @deco;
+//     list-style-type: @listo;
+// }
+
+.reset-mixin(@bord: 0;
+@pad: 0;
+@mar: 0px;
+@box: border-box;
+@dec: none;
+@list: none) {
+  border: @bord;
+  padding: @pad;
+  margin: @mar;
+  box-sizing: @box;
+  text-decoration: @dec;
+  list-style-type: @list;
+}
+
+// .mixin(@color: black; @margin: 10px; @padding: 20px) {
+//   color: @color;
+//   margin: @margin;
+//   padding: @padding;
+// }
+// .class1 {
+//   .mixin(@margin: 20px; @color: #33acfe);
+// }
+// .class2 {
+//   .mixin(#efca44; @padding: 40px);
+// }
+// TEXT
+// @mixin fontProperties (@family: null, @size: null, @space: null, @color: null) {
+//     font-family: @family;
+//     font-size: @size;
+//     letter-spacing: @space;
+//     color: @color;
+// }
+
+// TRANSITIONS
+// @mixin transitions (@web: null, @moz: null, @o: null, @all: null) {
+//     -webkit-transition: @web;
+//     -moz-transition: @moz;
+//     -o-transition: @o;
+//     transition: @all;
+// }
+
+// POSITIONING
+// @mixin positioning(@pos: null, @t: null, @b: null, @l: null, @r: null) {
+//     position: @pos;
+//     top: @t;
+//     bottom: @b;
+//     left: @l;
+//     right: @r;
+// }

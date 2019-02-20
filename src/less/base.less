@@ -1,15 +1,22 @@
-// @import "bootstrap/index";
+// LESS
+// BASE VALUES
+// IMPORT VARIABLES & MIXINS
+@import 'variables';
+@import 'mixins';
+
+// IMPORT BOOTSTRAP LESS
+@import "bootstrap/index";
 
 * {
-  border: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+  .reset-mixin(@bord: 0;
+  @pad: 0;
+  @mar: 0px;
+  @box: border-box;
+  @dec: none;
+  @list: none);
 }
 
 body {
-  background: #222222;
-  color: #fff;
+  color: @wht;
+  font-family: @main-font;
 }

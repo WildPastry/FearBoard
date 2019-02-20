@@ -48,12 +48,12 @@ gulp.task('htmlv', function () {
     .pipe(htmlv({
       format: 'html'
     }))
-    .pipe(gulp.dest('./error'));
+    .pipe(gulp.dest('src/error'));
 });
 
 // JSHINT
 gulp.task('lint', function () {
-  return gulp.src('src/js/app.js')
+  return gulp.src('src/js/main.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(connect.reload());
@@ -121,7 +121,7 @@ gulp.task('clear', function (callback) {
 
 //LOAD TASKS
 gulp.task('default',
-  gulp.series('serve', 'less', 'html', 'lint', 'watch')
+  gulp.series('serve', 'less', 'html', 'lint', 'htmlv', 'watch')
 );
 
 // BUILD

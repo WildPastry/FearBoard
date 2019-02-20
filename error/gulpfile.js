@@ -108,6 +108,16 @@ gulp.task('watch', function (event) {
   event();
 });
 
+/* Task to watch less changes */
+// gulp.task('watch-less', function() {  
+//   gulp.watch('./src/**/*.less' , ['less']);
+// });
+
+//LOAD
+gulp.task('default',
+  gulp.series('serve', 'less', 'html', 'lint', 'watch')
+);
+
 //CLEAN
 gulp.task('clean', function (event) {
   del.sync('dist');
@@ -119,11 +129,6 @@ gulp.task('clear', function (callback) {
   return cache.clearAll(callback)
 });
 
-//LOAD TASKS
-gulp.task('default',
-  gulp.series('serve', 'less', 'html', 'lint', 'watch')
-);
-
 // BUILD
 gulp.task(
   'build',
@@ -132,3 +137,36 @@ gulp.task(
     gulp.parallel('less', 'useref', 'images', 'script', 'fonts', 'frameworkjs', 'frameworkcss')
   )
 );
+
+// var gulp,
+//     sass,
+//     merge,
+//     concat,
+//     rename;
+
+// //load dependencies
+// gulp = require('gulp');
+// sass = require('gulp-sass');
+// merge = require('merge-stream');
+// concat = require('gulp-concat');
+// rename = require('gulp-rename');
+
+// //define default task
+// gulp.task('default', function () {
+//     var sassStream,
+//         cssStream;
+
+//     //compile sass
+//     sassStream = gulp.src('app.scss')
+//         .pipe(sass({
+//             errLogToConsole: true
+//         }));
+
+//     //select additional css files
+//     cssStream = gulp.src('animate.css');
+
+//     //merge the two streams and concatenate their contents into a single file
+//     return merge(sassStream, cssStream)
+//         .pipe(concat('app.css'))
+//         .pipe(gulp.dest(paths.public + 'css/'));
+// });

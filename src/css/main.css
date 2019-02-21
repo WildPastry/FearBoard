@@ -6632,6 +6632,11 @@ body {
   color: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
 }
+h1,
+h2 {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
 .spooder {
   cursor: pointer;
   left: 50%;
@@ -6669,8 +6674,8 @@ body {
   height: 100%;
 }
 .section .master .container-fluid {
-  width: 800px;
-  height: 400px;
+  width: 90%;
+  height: 90%;
   background: #043055;
   margin: 0 auto;
   padding: 20px;
@@ -6678,8 +6683,14 @@ body {
 #section2 {
   display: none;
 }
-h1,
-h2 {
-  text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+.row {
+  margin: 0;
+}
+.row .col {
+  padding: 0;
+}
+.col-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

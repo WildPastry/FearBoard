@@ -1,5 +1,5 @@
 [{
-    "age": "26",
+    "age": 26,
     "sex": "female",
     "country": "China",
     "nachos": "1",
@@ -11,7 +11,7 @@
     "amount": "Never"
   },
   {
-    "age": "26",
+    "age": 26,
     "sex": "female",
     "country": "Philippines",
     "nachos": "1",
@@ -23,7 +23,7 @@
     "amount": "100"
   },
   {
-    "age": "34",
+    "age": 34,
     "sex": "female",
     "country": "Africa",
     "nachos": "1",
@@ -35,7 +35,7 @@
     "amount": "100000"
   },
   {
-    "age": "20",
+    "age": 20,
     "sex": "female",
     "country": "America",
     "nachos": "1",
@@ -47,7 +47,7 @@
     "amount": "Never"
   },
   {
-    "age": "34",
+    "age": 34,
     "sex": "male",
     "country": "Syria",
     "nachos": "5",
@@ -59,7 +59,7 @@
     "amount": "Free"
   },
   {
-    "age": "24",
+    "age": 24,
     "sex": "male",
     "country": "America",
     "nachos": "5",
@@ -71,7 +71,7 @@
     "amount": "1000"
   },
   {
-    "age": "34",
+    "age": 34,
     "sex": "male",
     "country": "America",
     "nachos": "5",
@@ -83,7 +83,7 @@
     "amount": "100000"
   },
   {
-    "age": "38",
+    "age": 38,
     "sex": "male",
     "country": "Bulgaria",
     "nachos": "5",
@@ -94,7 +94,7 @@
     "creature": "Spider",
     "amount": "Free"
   }, {
-    "age": "20",
+    "age": 20,
     "sex": "male",
     "country": "Turkey",
     "nachos": "5",
@@ -106,7 +106,7 @@
     "amount": "100000"
   },
   {
-    "age": "20",
+    "age": 20,
     "sex": "female",
     "country": "Africa",
     "nachos": "5",

@@ -11,7 +11,7 @@ document.getElementById('spooder').addEventListener('click', section2);
 
 // GET MAP KEY
 $.ajax({
-  url: 'config.json',
+  url: '../config.json',
   dataType: 'json',
   type: 'get',
   success: function (keys) {
@@ -69,13 +69,13 @@ function drawPieChart() {
       data.addColumn('string', 'Creature');
       data.addColumn('number', 'Age');
       for (var i = 0; i < classData.length; i++) {
-        console.log(classData[i].creature, classData[i].age );
-        data.addRow([classData[i].creature, classData[i].age])
+        console.log(classData[i].creature, classData[i].age);
+        data.addRow([classData[i].creature, classData[i].age]);
       }
       var options = {
         height: 400,
         width: 600,
-        title: 'Most terrifying creature?',
+        title: 'Most terrifying creature',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         pieHole: 0.4,
       };
@@ -134,105 +134,191 @@ function drawRegionsMap() {
 
 // SCATTER CHART
 function drawScatterChart() {
-  var data = google.visualization.arrayToDataTable([
-    ['Age', 'Weight'],
-    [8, 12],
-    [4, 5.5],
-    [11, 14],
-    [4, 5],
-    [3, 3.5],
-    [6.5, 7]
-  ]);
-
-  var options = {
-    height: 400,
-    width: 600,
-    title: 'Graph 3',
-    hAxis: {
-      title: 'Age',
-      minValue: 0,
-      maxValue: 15
+  $.ajax({
+    url: 'json/classData.json',
+    dataType: 'json',
+    type: 'get',
+    success: function (classData) {
+      console.log('Scatter chart data:');
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Age');
+      data.addColumn('number', 'Cash');
+      for (var i = 0; i < classData.length; i++) {
+        console.log(classData[i].age, classData[i].amount);
+        data.addRow([classData[i].age, classData[i].amount]);
+      }
+      var options = {
+        height: 400,
+        width: 600,
+        title: 'How much money to be trapped with your terrifying creature?',
+        hAxis: {
+          title: 'Age',
+          // minValue: 0,
+          // maxValue: 15
+        },
+        vAxis: {
+          title: 'Cash',
+          // minValue: 0,
+          // maxValue: 15
+        },
+        colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+      };
+      var chart = new google.visualization.ScatterChart(document.getElementById('graph3'));
+      chart.draw(data, options);
     },
-    vAxis: {
-      title: 'Weight',
-      minValue: 0,
-      maxValue: 15
-    },
-    colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-  };
-
-  var chart = new google.visualization.ScatterChart(document.getElementById('graph3'));
-
-  chart.draw(data, options);
+    error: function (error) {
+      console.log(error);
+      console.log("can't load scatter chart data...");
+    }
+  });
 }
+
+// function drawScatterChart() {
+//   var data = google.visualization.arrayToDataTable([
+//     ['Age', 'Weight'],
+//     [8, 12],
+//     [4, 5.5],
+//     [11, 14],
+//     [4, 5],
+//     [3, 3.5],
+//     [6.5, 7]
+//   ]);
+
+//   var options = {
+//     height: 400,
+//     width: 600,
+//     title: 'Graph 3',
+//     hAxis: {
+//       title: 'Age',
+//       minValue: 0,
+//       maxValue: 15
+//     },
+//     vAxis: {
+//       title: 'Weight',
+//       minValue: 0,
+//       maxValue: 15
+//     },
+//     colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+//   };
+
+//   var chart = new google.visualization.ScatterChart(document.getElementById('graph3'));
+
+//   chart.draw(data, options);
+// }
 
 // BAR CHART
+// var data = google.visualization.arrayToDataTable([
+//   ['Year', 'Sales', 'Expenses', 'Profit'],
+//   ['2014', 1000, 400, 200],
+//   ['2015', 1170, 460, 250],
+//   ['2016', 660, 1120, 300],
+//   ['2017', 1030, 540, 350]
+// ]);
+
 function drawBarChart() {
-  var data = google.visualization.arrayToDataTable([
-    ['City', '2010 Population', '2000 Population'],
-    ['New York City, NY', 8175000, 8008000],
-    ['Los Angeles, CA', 3792000, 3694000],
-    ['Chicago, IL', 2695000, 2896000],
-    ['Houston, TX', 2099000, 1953000],
-    ['Philadelphia, PA', 1526000, 1517000]
-  ]);
-
-  var data = google.visualization.arrayToDataTable([
-    ['City', '2010 Population', {
-        type: 'string',
-        role: 'annotation'
-      },
-      '2000 Population', {
-        type: 'string',
-        role: 'annotation'
+  $.ajax({
+    url: 'json/classData.json',
+    dataType: 'json',
+    type: 'get',
+    success: function (classData) {
+      console.log('Bar chart data:');
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Rank');
+      data.addColumn('number', 'Rank');
+      data.addColumn('number', 'Nachos');
+      for (var i = 0; i < classData.length; i++) {
+        console.log(classData[i].item, classData[i].rank);
+        data.addRow([classData[i].item, classData[i].rank, classData[i].age]);
       }
-    ],
-    ['New York City, NY', 8175000, '8.1M', 8008000, '8M'],
-    ['Los Angeles, CA', 3792000, '3.8M', 3694000, '3.7M'],
-    ['Chicago, IL', 2695000, '2.7M', 2896000, '2.9M'],
-    ['Houston, TX', 2099000, '2.1M', 1953000, '2.0M'],
-    ['Philadelphia, PA', 1526000, '1.5M', 1517000, '1.5M']
-  ]);
-
-  var options = {
-    height: 400,
-    width: 600,
-    title: 'Graph 4',
-    colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-    chartArea: {
-      width: '50%'
-    },
-    annotations: {
-      alwaysOutside: true,
-      textStyle: {
-        fontSize: 12,
-        auraColor: 'none',
-        color: '#555'
-      },
-      boxStyle: {
-        stroke: '#ccc',
-        strokeWidth: 1,
-        gradient: {
-          color1: '#e0440e',
-          color2: '#e6693e',
-          x1: '0%',
-          y1: '0%',
-          x2: '100%',
-          y2: '100%'
-        }
-      }
-    },
+      var options = {
+        bars: 'vertical',
+        height: 400,
+        width: 600,
+        title: 'Items ranked in order of fear',
     hAxis: {
-      title: 'Total Population',
-      minValue: 0,
+      title: 'Age',
+      // minValue: 0,
     },
     vAxis: {
-      title: 'City'
+      title: 'Rank'
+    },
+        colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('graph4'));
+      chart.draw(data, options);
+    },
+    error: function (error) {
+      console.log(error);
+      console.log("can't load bar chart data...");
     }
-  };
-  var chart = new google.visualization.BarChart(document.getElementById('graph4'));
-  chart.draw(data, options);
+  });
 }
+// function drawBarChart() {
+//   var data = google.visualization.arrayToDataTable([
+//     ['City', '2010 Population', '2000 Population'],
+//     ['New York City, NY', 8175000, 8008000],
+//     ['Los Angeles, CA', 3792000, 3694000],
+//     ['Chicago, IL', 2695000, 2896000],
+//     ['Houston, TX', 2099000, 1953000],
+//     ['Philadelphia, PA', 1526000, 1517000]
+//   ]);
+
+//   data = google.visualization.arrayToDataTable([
+//     ['City', '2010 Population', {
+//         type: 'string',
+//         role: 'annotation'
+//       },
+//       '2000 Population', {
+//         type: 'string',
+//         role: 'annotation'
+//       }
+//     ],
+//     ['New York City, NY', 8175000, '8.1M', 8008000, '8M'],
+//     ['Los Angeles, CA', 3792000, '3.8M', 3694000, '3.7M'],
+//     ['Chicago, IL', 2695000, '2.7M', 2896000, '2.9M'],
+//     ['Houston, TX', 2099000, '2.1M', 1953000, '2.0M'],
+//     ['Philadelphia, PA', 1526000, '1.5M', 1517000, '1.5M']
+//   ]);
+
+//   var options = {
+//     height: 400,
+//     width: 600,
+//     title: 'Graph 4',
+//     colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+//     chartArea: {
+//       width: '50%'
+//     },
+//     annotations: {
+//       alwaysOutside: true,
+//       textStyle: {
+//         fontSize: 12,
+//         auraColor: 'none',
+//         color: '#555'
+//       },
+//       boxStyle: {
+//         stroke: '#ccc',
+//         strokeWidth: 1,
+//         gradient: {
+//           color1: '#e0440e',
+//           color2: '#e6693e',
+//           x1: '0%',
+//           y1: '0%',
+//           x2: '100%',
+//           y2: '100%'
+//         }
+//       }
+//     },
+//     hAxis: {
+//       title: 'Total Population',
+//       minValue: 0,
+//     },
+//     vAxis: {
+//       title: 'City'
+//     }
+//   };
+//   var chart = new google.visualization.BarChart(document.getElementById('graph4'));
+//   chart.draw(data, options);
+// }
 
 // PAGE ANIMATION
 function section1() {

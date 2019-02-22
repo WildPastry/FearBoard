@@ -8,7 +8,9 @@
     "swimming": "4",
     "dentist": "5",
     "creature": "Mouse",
-    "amount": "Never"
+    "amount": 100000000,
+    "item": "Nachos",
+    "rank": 100
   },
   {
     "age": 26,
@@ -20,7 +22,9 @@
     "swimming": "4",
     "dentist": "5",
     "creature": "Spider",
-    "amount": "100"
+    "amount": 100,
+    "item": "Nachos",
+    "rank": 100
   },
   {
     "age": 34,
@@ -32,7 +36,9 @@
     "swimming": "5",
     "dentist": "4",
     "creature": "Snake",
-    "amount": "100000"
+    "amount": 100000,
+    "item": "Nachos",
+    "rank": 100
   },
   {
     "age": 20,
@@ -44,7 +50,9 @@
     "swimming": "4",
     "dentist": "2",
     "creature": "Shark",
-    "amount": "Never"
+    "amount": 100000000,
+    "item": "Nachos",
+    "rank": 100
   },
   {
     "age": 34,
@@ -56,7 +64,9 @@
     "swimming": "4",
     "dentist": "3",
     "creature": "Shark",
-    "amount": "Free"
+    "amount": 0,
+    "item": "Nachos",
+    "rank": 20
   },
   {
     "age": 24,
@@ -68,7 +78,9 @@
     "swimming": "4",
     "dentist": "3",
     "creature": "Shark",
-    "amount": "1000"
+    "amount": 1000,
+    "item": "Nachos",
+    "rank": 20
   },
   {
     "age": 34,
@@ -80,7 +92,9 @@
     "swimming": "4",
     "dentist": "3",
     "creature": "Bear",
-    "amount": "100000"
+    "amount": 100000,
+    "item": "Nachos",
+    "rank": 20
   },
   {
     "age": 38,
@@ -92,7 +106,9 @@
     "swimming": "2",
     "dentist": "4",
     "creature": "Spider",
-    "amount": "Free"
+    "amount": 0,
+    "item": "Nachos",
+    "rank": 20
   }, {
     "age": 20,
     "sex": "male",
@@ -103,7 +119,9 @@
     "swimming": "3",
     "dentist": "4",
     "creature": "Shark",
-    "amount": "100000"
+    "amount": 100000,
+    "item": "Nachos",
+    "rank": 20
   },
   {
     "age": 20,
@@ -115,6 +133,8 @@
     "swimming": "4",
     "dentist": "1",
     "creature": "Shark",
-    "amount": "100"
+    "amount": 100,
+    "item": "Nachos",
+    "rank": 20
   }
 ]

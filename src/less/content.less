@@ -6,6 +6,9 @@
 
 // SPOODER
 .spooder {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
   cursor: pointer;
   left: 50%;
   margin-left: -280px;
@@ -25,6 +28,22 @@
   }
 }
 
+// FEAR
+.fear {
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -324px;
+  position: absolute;
+  top: 50%;
+  height: 648px;
+  width: 1000px;
+  z-index: 0;
+}
+
+#fear {
+  fill: @blue-blk;
+}
+
 // SECTIONS
 .section {
   -webkit-background-size: cover;
@@ -36,38 +55,49 @@
   position: fixed;
   width: 100%;
   height: 100%;
-
-  .master {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-
-    .container-fluid {
-      width: 90%;
-      background: @blue-lgt;
-      margin: @main-mar;
-      padding: @main-pad;
-    }
-  }
 }
 
-#section2 {
+#section2,
+#section3,
+#section4,
+#section5 {
   display: none;
 }
 
-.row {
-  margin: @zero-mar;
-
-  .col {
-    padding: @zero-pad;
-  }
-}
-
-.col-flex{
+// MASTER
+.master {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+// CONTAINER
+.container-fluid {
+  width: 90%;
+  background: @blue-lgt;
+  margin: @main-mar;
+  padding: @main-pad;
+}
+
+// ROW & COL
+.row {
+  margin: @zero-mar;
+}
+
+.col {
+  padding: @zero-pad;
+}
+
+.col-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// BUTTON
+.btn {
+  background: @blue6;
 }

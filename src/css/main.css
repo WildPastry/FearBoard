@@ -6628,6 +6628,9 @@ button.close {
   text-decoration: none;
   list-style-type: none;
 }
+html {
+  overflow: auto;
+}
 body {
   color: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
@@ -6638,6 +6641,9 @@ h2 {
   font-family: 'Source Sans Pro', sans-serif;
 }
 .spooder {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
   cursor: pointer;
   left: 50%;
   margin-left: -280px;
@@ -6654,6 +6660,19 @@ h2 {
 #spooder:hover {
   fill: #043055;
 }
+.fear {
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -324px;
+  position: absolute;
+  top: 50%;
+  height: 648px;
+  width: 1000px;
+  z-index: 0;
+}
+#fear {
+  fill: #010f1b;
+}
 .section {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6665,7 +6684,13 @@ h2 {
   width: 100%;
   height: 100%;
 }
-.section .master {
+#section2,
+#section3,
+#section4,
+#section5 {
+  display: none;
+}
+.master {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6673,23 +6698,29 @@ h2 {
   width: 100%;
   height: 100%;
 }
-.section .master .container-fluid {
+.container-fluid {
   width: 90%;
   background: #043055;
   margin: 0 auto;
   padding: 20px;
 }
-#section2 {
-  display: none;
-}
 .row {
   margin: 0;
 }
-.row .col {
+.col {
   padding: 0;
 }
 .col-flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.btn {
+  background: #cb98e9;
+}
+#chart1 text,
+#chart2 text,
+#chart3 text,
+#chart4 text {
+  stroke: none !important;
 }

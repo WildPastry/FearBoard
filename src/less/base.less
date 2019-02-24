@@ -23,10 +23,36 @@ html {
 body {
   color: @wht;
   font-family: @main-font;
+  font-size: 17px;
 }
 
 h1,
 h2 {
   text-align: center;
   font-family: @main-font;
+  color: #fff;
+}
+
+// FLOATS
+.floatLeft {
+  // float: left;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 10;
+  // &after {
+  //   clear: left;
+  // }
+}
+
+.floatRight {
+  // float: right;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 10;
+
+  // &after {
+  //   clear: right;
+  // }
 }

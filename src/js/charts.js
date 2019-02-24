@@ -87,15 +87,15 @@ function drawPieChart() {
           },
           showColorCode: true
         },
-        width: 1000,
-        height: 500,
+        width: 800,
+        height: 400,
         fontSize: 17,
         fontName: 'Source Sans Pro',
         title: ' ',
         backgroundColor: {
           fill: 'transparent'
         },
-        colors: ['#4182bb', '#005daf', '#f7697c', '#004581', '#e998b0'],
+        colors: ['#f74444', '#faa178', '#f7697c', '#f07651', '#e998b0'],
         titleTextStyle: {
           color: '#fff'
         },
@@ -163,8 +163,8 @@ function drawRegionsMap() {
         fontSize: 17,
         fontName: 'Source Sans Pro',
         stroke: 'none',
-        width: 1000,
-        height: 500,
+        width: 800,
+        height: 400,
         title: ' ',
         backgroundColor: {
           fill: 'transparent'
@@ -215,8 +215,8 @@ function drawColumnChart() {
         },
         fontSize: 17,
         fontName: 'Source Sans Pro',
-        width: 1000,
-        height: 500,
+        width: 800,
+        height: 400,
         title: ' ',
         backgroundColor: {
           fill: 'transparent'
@@ -298,8 +298,8 @@ function drawBarChart() {
         },
         fontSize: 17,
         fontName: 'Source Sans Pro',
-        width: 1000,
-        height: 500,
+        width: 800,
+        height: 400,
         title: ' ',
         backgroundColor: {
           fill: 'transparent'

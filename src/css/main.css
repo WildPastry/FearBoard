@@ -6634,11 +6634,25 @@ html {
 body {
   color: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
 }
 h1,
 h2 {
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
+}
+.floatLeft {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 10;
+}
+.floatRight {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 10;
 }
 .spooder {
   animation-delay: 1s;
@@ -6646,18 +6660,18 @@ h2 {
   animation-iteration-count: 1;
   cursor: pointer;
   left: 50%;
-  margin-left: -280px;
-  margin-top: -400px;
+  margin-left: -450px;
+  margin-top: -550px;
   position: absolute;
   top: 50%;
-  height: 800px;
-  width: 560px;
+  height: 920px;
+  width: 900px;
   z-index: 10;
 }
-#spooder {
+.spooderFill {
   fill: #021425;
 }
-#spooder:hover {
+.spooderFill:hover {
   fill: #043055;
 }
 .fear {
@@ -6674,11 +6688,6 @@ h2 {
   fill: #010f1b;
 }
 .section {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
   background: #03223d;
   position: fixed;
   width: 100%;
@@ -6699,7 +6708,9 @@ h2 {
   height: 100%;
 }
 .container-fluid {
-  width: 90%;
+  position: relative;
+  width: 1000px;
+  height: 600px;
   background: #043055;
   margin: 0 auto;
   padding: 20px;
@@ -6715,8 +6726,12 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.btn {
-  background: #cb98e9;
+.btn-section {
+  background: #98c3e9;
+  width: 60px;
+}
+.progressBarBot {
+  margin-top: 50px;
 }
 #chart1 text,
 #chart2 text,

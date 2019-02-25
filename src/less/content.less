@@ -4,18 +4,44 @@
 @import 'variables';
 @import 'mixins';
 
+
+// HEADER
+// .header{
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: 20px;
+// }
+
+// ICONS
+i {
+  cursor: pointer;
+}
+
+.fa-home,
+.fa-chart-bar {
+  cursor: pointer;
+  color: @blue19;
+  font-size: 20px;
+  margin: @sml-mar;
+
+  &:hover {
+    color: @wht;
+  }
+}
+
 // SPOODER
 .spooder {
   animation-delay: 1s;
   animation-duration: 1s;
   animation-iteration-count: 1;
   cursor: pointer;
+  height: 920px;
   left: 50%;
   margin-left: -450px;
   margin-top: -550px;
   position: absolute;
   top: 50%;
-  height: 920px;
   width: 900px;
   z-index: 10;
 }
@@ -24,18 +50,19 @@
   fill: @blue-drk;
 
   &:hover {
-    fill: @blue-lgt;
+    fill: @blue19;
   }
 }
 
 // FEAR
 .fear {
+  cursor: pointer;
+  height: 648px;
   left: 50%;
   margin-left: -500px;
   margin-top: -324px;
   position: absolute;
   top: 50%;
-  height: 648px;
   width: 1000px;
   z-index: 0;
 }
@@ -45,14 +72,8 @@
 }
 
 // SECTIONS
-.section {
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
-  // background-position: center center;
-  background: @blue;
-  // background-image: url("../img/spooky.png");
+.section1 {
+  // background: @blue;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -67,28 +88,24 @@
 
 // MASTER
 .master {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: fixed;
   width: 100%;
-  height: 100%;
-  // background-repeat: repeat-y;
 }
 
 // CONTAINER
 .container-fluid {
+  background: @blue-lgt;
+  margin: @big-mar;
+  padding: @main-pad;
   position: relative;
   width: 1000px;
-  height: 600px;
-  background: @blue-lgt;
-  margin: @main-mar;
-  padding: @main-pad;
 }
 
 // ROW & COL
 .row {
-  margin: @zero-mar;
+  margin: @big-mar;
 }
 
 .col {
@@ -102,10 +119,10 @@
 }
 
 // BUTTON
-.btn-section {
-  background: @blue5;
-  width: 60px;
-}
+// .btn-section {
+//   background: @blue5;
+//   width: 60px;
+// }
 
 // .btn-warning {
 //   background: @blue-drk;
@@ -129,6 +146,6 @@
 //   color: @wht  !important;
 // }
 
-.progressBarBot {
-  margin-top: 50px;
-}
+// .progressBarBot {
+//   margin-top: 50px;
+// }

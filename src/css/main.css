@@ -6628,11 +6628,10 @@ button.close {
   text-decoration: none;
   list-style-type: none;
 }
-html {
-  overflow: auto;
-}
 body {
+  position: relative;
   color: #ffffff;
+  background: #03223d;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
 }
@@ -6643,28 +6642,42 @@ h2 {
   color: #fff;
 }
 .floatLeft {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  z-index: 10;
+  float: left;
+}
+.floatLeft::after {
+  clear: left;
 }
 .floatRight {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  z-index: 10;
+  float: right;
+}
+.floatRight::after {
+  clear: right;
+}
+i {
+  cursor: pointer;
+}
+.fa-home,
+.fa-chart-bar {
+  cursor: pointer;
+  color: #f74444;
+  font-size: 20px;
+  margin: 15px 0 0 15px;
+}
+.fa-home:hover,
+.fa-chart-bar:hover {
+  color: #ffffff;
 }
 .spooder {
   animation-delay: 1s;
   animation-duration: 1s;
   animation-iteration-count: 1;
   cursor: pointer;
+  height: 920px;
   left: 50%;
   margin-left: -450px;
   margin-top: -550px;
   position: absolute;
   top: 50%;
-  height: 920px;
   width: 900px;
   z-index: 10;
 }
@@ -6672,23 +6685,23 @@ h2 {
   fill: #021425;
 }
 .spooderFill:hover {
-  fill: #043055;
+  fill: #f74444;
 }
 .fear {
+  cursor: pointer;
+  height: 648px;
   left: 50%;
   margin-left: -500px;
   margin-top: -324px;
   position: absolute;
   top: 50%;
-  height: 648px;
   width: 1000px;
   z-index: 0;
 }
 #fear {
   fill: #010f1b;
 }
-.section {
-  background: #03223d;
+.section1 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -6700,23 +6713,20 @@ h2 {
   display: none;
 }
 .master {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: fixed;
   width: 100%;
-  height: 100%;
 }
 .container-fluid {
+  background: #043055;
+  margin: 50px 0 50px 0;
+  padding: 20px;
   position: relative;
   width: 1000px;
-  height: 600px;
-  background: #043055;
-  margin: 0 auto;
-  padding: 20px;
 }
 .row {
-  margin: 0;
+  margin: 50px 0 50px 0;
 }
 .col {
   padding: 0;
@@ -6725,13 +6735,6 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.btn-section {
-  background: #98c3e9;
-  width: 60px;
-}
-.progressBarBot {
-  margin-top: 50px;
 }
 #chart1 text,
 #chart2 text,

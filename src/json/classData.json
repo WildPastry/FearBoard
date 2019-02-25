@@ -5,16 +5,16 @@
     "creature": "Mouse",
     "amount": 100,
     "item": "Nachos",
-    "name": "Sarah"
+    "name": "Chloe"
   },
   {
     "age": 26,
     "sex": "female",
-    "country": "Philippines",
+    "country": "Laos",
     "creature": "Spider",
     "amount": 10,
-    "item": "Nachos",
-    "name": "Kate"
+    "item": "Public Speaking",
+    "name": "Lisa"
   },
   {
     "age": 34,
@@ -22,8 +22,8 @@
     "country": "Africa",
     "creature": "Snake",
     "amount": 50,
-    "item": "Nachos",
-    "name": "Lucy"
+    "item": "Public Speaking",
+    "name": "Han"
   },
   {
     "age": 20,
@@ -32,7 +32,7 @@
     "creature": "Shark",
     "amount": 100,
     "item": "Dentist",
-    "name": "Liz"
+    "name": "Lexi"
   },
   {
     "age": 34,
@@ -42,7 +42,7 @@
     "creature": "Shark",
     "amount": 30,
     "item": "Dentist",
-    "name": "Mark"
+    "name": "Mike"
   },
   {
     "age": 24,
@@ -51,7 +51,7 @@
     "creature": "Shark",
     "amount": 10,
     "item": "Swimming",
-    "name": "John"
+    "name": "Joe"
   },
   {
     "age": 34,
@@ -60,7 +60,7 @@
     "creature": "Bear",
     "amount": 50,
     "item": "Public Speaking",
-    "name": "James"
+    "name": "Dan"
   },
   {
     "age": 38,
@@ -69,7 +69,7 @@
     "creature": "Spider",
     "amount": 70,
     "item": "Public Speaking",
-    "name": "Jason"
+    "name": "Yoon"
   }, {
     "age": 20,
     "sex": "male",
@@ -77,7 +77,7 @@
     "creature": "Shark",
     "amount": 50,
     "item": "Public Speaking",
-    "name": "Tom"
+    "name": "Sam"
   },
   {
     "age": 20,
@@ -86,6 +86,6 @@
     "creature": "Shark",
     "amount": 100,
     "item": "Heights",
-    "name": "Kim"
+    "name": "Maria"
   }
 ]

@@ -81,12 +81,27 @@ function drawPieChart() {
       data.addRow(['Snake', snake]);
 
       var options = {
+        pieSliceText: 'none',
+        slices: {
+          0: {
+            offset: 0.3
+          },
+          3: {
+            offset: 0.3
+          },
+          4: {
+            offset: 0.1
+          },
+        },
+
+        legend: 'none',
         tooltip: {
           textStyle: {
             color: '#03223d'
           },
           showColorCode: true
         },
+        chartArea:{left:200,top:75,width:'50%',height:'70%'},
         width: 800,
         height: 400,
         fontSize: 17,
@@ -96,17 +111,8 @@ function drawPieChart() {
           fill: 'transparent'
         },
         colors: ['#f74444', '#faa178', '#f7697c', '#f07651', '#e998b0'],
-        titleTextStyle: {
-          color: '#fff'
-        },
-        legend: {
-          textStyle: {
-            color: 'fff'
-          },
-        },
-        'pieHole': 0.4,
-        is3D: true
       };
+
       var chart = new google.visualization.PieChart(document.getElementById('chart1'));
       chart.draw(data, options);
     },
@@ -129,7 +135,7 @@ function drawRegionsMap() {
       data.addColumn('number', 'Votes');
       var china = 0;
       var us = 0;
-      var philippines = 0;
+      var laos = 0;
       var africa = 0;
       var syria = 0;
       var bulgaria = 0;
@@ -137,17 +143,17 @@ function drawRegionsMap() {
       for (var i = 0; i < classData.length; i++) {
         if (classData[i].country == "China") china++;
         if (classData[i].country == "United States") us++;
-        if (classData[i].country == "Philippines") philippines++;
+        if (classData[i].country == "Laos") laos++;
         if (classData[i].country == "Africa") africa++;
         if (classData[i].country == "Syria") syria++;
         if (classData[i].country == "Bulgaria") bulgaria++;
         if (classData[i].country == "Turkey") turkey++;
       };
       console.log("Geo chart data loaded...");
-      console.log(china, us, philippines, africa, syria, bulgaria, turkey);
+      console.log(china, us, laos, africa, syria, bulgaria, turkey);
       data.addRow(['China', china]);
-      data.addRow(['United States', us]);
-      data.addRow(['Philippines', philippines]);
+      data.addRow(['U.S', us]);
+      data.addRow(['Laos', laos]);
       data.addRow(['Africa', africa]);
       data.addRow(['Syria', syria]);
       data.addRow(['Bulgaria', bulgaria]);
@@ -163,25 +169,37 @@ function drawRegionsMap() {
         fontSize: 17,
         fontName: 'Source Sans Pro',
         stroke: 'none',
+        gridlines: 'none',
+
+        // chartArea:{left:200,top:75,width:'50%',height:'70%'},
         width: 800,
         height: 400,
         title: ' ',
         backgroundColor: {
           fill: 'transparent'
         },
-        colors: ['#b12199', '#f7697c'],
-        titleTextStyle: {
-          color: '#fff'
-        },
-        datalessRegionColor: '#b9d3f0',
-        legend: {
-          position: 'left',
+        colors: ['#faa178'],
+        lineWidth: 5,
+
+        legend: 'none',
+        vAxis: {
           textStyle: {
-            color: 'fff',
+            color: '#fff'
+          },
+          gridlines: {
+            color: 'transparent'
+          }
+        },
+        hAxis: {
+          textStyle: {
+            color: '#fff'
+          },
+          gridlines: {
+            color: 'transparent'
           }
         }
       };
-      var chart = new google.visualization.GeoChart(document.getElementById('chart2'));
+      var chart = new google.visualization.ComboChart(document.getElementById('chart2'));
       chart.draw(data, options);
     },
     error: function (error) {
@@ -190,6 +208,74 @@ function drawRegionsMap() {
     }
   });
 }
+// function drawRegionsMap() {
+//   $.ajax({
+//     url: 'json/classData.json',
+//     dataType: 'json',
+//     type: 'get',
+//     success: function (classData) {
+//       var data = new google.visualization.DataTable();
+//       data.addColumn('string', 'Country');
+//       data.addColumn('number', 'Votes');
+//       var china = 0;
+//       var us = 0;
+//       var laos = 0;
+//       var africa = 0;
+//       var syria = 0;
+//       var bulgaria = 0;
+//       var turkey = 0;
+//       for (var i = 0; i < classData.length; i++) {
+//         if (classData[i].country == "China") china++;
+//         if (classData[i].country == "United States") us++;
+//         if (classData[i].country == "Laos") laos++;
+//         if (classData[i].country == "Africa") africa++;
+//         if (classData[i].country == "Syria") syria++;
+//         if (classData[i].country == "Bulgaria") bulgaria++;
+//         if (classData[i].country == "Turkey") turkey++;
+//       };
+//       console.log("Geo chart data loaded...");
+//       console.log(china, us, laos, africa, syria, bulgaria, turkey);
+//       data.addRow(['China', china]);
+//       data.addRow(['United States', us]);
+//       data.addRow(['Laos', laos]);
+//       data.addRow(['Africa', africa]);
+//       data.addRow(['Syria', syria]);
+//       data.addRow(['Bulgaria', bulgaria]);
+//       data.addRow(['Turkey', turkey]);
+
+//       var options = {
+//         tooltip: {
+//           textStyle: {
+//             color: '#03223d'
+//           },
+//           showColorCode: true
+//         },
+//         fontSize: 17,
+//         fontName: 'Source Sans Pro',
+//         stroke: 'none',
+//         chartArea:{left:200,top:75,width:'50%',height:'70%'},
+//         width: 800,
+//         height: 400,
+//         title: ' ',
+//         backgroundColor: {
+//           fill: 'transparent'
+//         },
+//         colors: ['#b12199', '#f7697c'],
+//         titleTextStyle: {
+//           color: '#fff'
+//         },
+//         datalessRegionColor: '#b9d3f0',
+//         legend: 'none'
+//       };
+//       var chart = new google.visualization.GeoChart(document.getElementById('chart2'));
+//       chart.draw(data, options);
+//     },
+//     error: function (error) {
+//       console.log(error);
+//       console.log("can't load geo chart data...");
+//     }
+//   });
+// }
 
 // COLUMN CHART
 function drawColumnChart() {
@@ -207,6 +293,7 @@ function drawColumnChart() {
         data.addRow([classData[i].name, classData[i].amount]);
       }
       var options = {
+        legend: 'none',
         tooltip: {
           textStyle: {
             color: '#03223d'
@@ -221,22 +308,22 @@ function drawColumnChart() {
         backgroundColor: {
           fill: 'transparent'
         },
-        colors: ['#e998b0'],
-        titleTextStyle: {
-          color: '#fff'
+        series: {
+          0: { color: '#e998b0' },
+          1: { color: '#c23bd4' },
+          // 2: { lineWidth: 4 },
+          // 3: { lineWidth: 8 },
+          // 4: { lineWidth: 16 },
+          // 5: { lineWidth: 24 }
         },
-        legend: {
-          position: 'none',
-          textStyle: {
-            color: 'fff'
-          },
-        },
+
+        // colors: ['#e998b0'],
         vAxis: {
           textStyle: {
             color: '#fff'
           },
           gridlines: {
-            color: '#004581'
+            color: 'transparent'
           }
         },
         hAxis: {
@@ -244,7 +331,7 @@ function drawColumnChart() {
             color: '#fff'
           },
           gridlines: {
-            color: '#004581'
+            color: 'transparent'
           }
         }
       }
@@ -290,6 +377,7 @@ function drawBarChart() {
       data.addRow(['Dentist', dentist]);
 
       var options = {
+        legend: 'none',
         tooltip: {
           textStyle: {
             color: '#03223d'
@@ -304,30 +392,22 @@ function drawBarChart() {
         backgroundColor: {
           fill: 'transparent'
         },
-        legend: {
-          position: 'none',
-          textStyle: {
-            color: 'fff'
-          }
-        },
         colors: ['#cb98e9'],
-        titleTextStyle: {
-          color: '#fff'
-        },
         vAxis: {
           textStyle: {
             color: '#fff'
           },
           gridlines: {
-            color: '#004581'
+            color: 'transparent'
           }
         },
         hAxis: {
           textStyle: {
             color: '#fff'
           },
+          maxValue: 5,
           gridlines: {
-            color: '#004581'
+            color: 'transparent'
           }
         }
       }

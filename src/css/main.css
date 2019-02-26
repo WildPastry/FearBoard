@@ -6768,6 +6768,12 @@ i {
   left: 100px;
   top: 189px;
 }
+.info {
+  width: 100px;
+  position: absolute;
+  right: 100px;
+  top: 189px;
+}
 @media (max-width: 1100px) {
   .spooder {
     height: 690px;
@@ -6830,4 +6836,12 @@ i {
 }
 .snake i {
   color: #e998b0;
+}
+.down i {
+  color: #ffffff;
+  font-size: 2em;
+}
+.up i {
+  color: #ffffff;
+  font-size: 2em;
 }

@@ -30,6 +30,7 @@ google.charts.setOnLoadCallback(drawPieChart);
 google.charts.setOnLoadCallback(drawRegionsMap);
 google.charts.setOnLoadCallback(drawColumnChart);
 google.charts.setOnLoadCallback(drawBarChart);
+// google.charts.setOnLoadCallback(drawChart);
 
 // GET GRAPH DATA
 function getData() {
@@ -123,7 +124,7 @@ function drawPieChart() {
   });
 }
 
-// GEOCHART
+// COMBO CHART
 function drawRegionsMap() {
   $.ajax({
     url: 'json/classData.json',
@@ -421,3 +422,66 @@ function drawBarChart() {
     }
   });
 }
+
+// TEMP CHART
+// function drawChart() {
+//   var data = new google.visualization.DataTable();
+//   data.addColumn('string', 'Name');
+//   data.addColumn('number', 'Value');
+//   data.addRows([
+//       ['Foo', 2],
+//       ['Bar', 4],
+//       ['Baz', 3],
+//       ['Cud', 6],
+//       ['Waq', 8],
+//       ['Bat', 2],
+//       ['Cad', 5],
+//       ['Giv', 3],
+//       ['Muj', 9],
+//       ['Lof', 7],
+//       ['Duq', 5],
+//       ['Kaf', 1],
+//       ['Zij', 4],
+//   ]);
+  
+//   var view = new google.visualization.DataView(data);
+//   view.setColumns([0, {
+//       type: 'number',
+//       label: 'Value',
+//       calc: function (dt, row) {
+//           return (dt.getValue(row, 1) < 3) ? dt.getValue(row, 1) : null;
+//       }
+//   }, {
+//       type: 'number',
+//       label: 'Value',
+//       calc: function (dt, row) {
+//           return (dt.getValue(row, 1) >= 3 && dt.getValue(row, 1) < 5) ? dt.getValue(row, 1) : null;
+//       }
+//   }, {
+//       type: 'number',
+//       label: 'Value',
+//       calc: function (dt, row) {
+//           return (dt.getValue(row, 1) >= 5 && dt.getValue(row, 1) < 7) ? dt.getValue(row, 1) : null;
+//       }
+//   }, {
+//       type: 'number',
+//       label: 'Value',
+//       calc: function (dt, row) {
+//           return (dt.getValue(row, 1) >= 7 && dt.getValue(row, 1) < 9) ? dt.getValue(row, 1) : null;
+//       }
+//   }, {
+//       type: 'number',
+//       label: 'Value',
+//       calc: function (dt, row) {
+//           return (dt.getValue(row, 1) >= 9) ? dt.getValue(row, 1) : null;
+//       }
+//   }]);
+  
+//   var chart = new google.visualization.BarChart(document.getElementById('chart5'));
+//   chart.draw(view, {
+//       legend: 'none',
+//       isStacked: true,
+//       height: 400,
+//       width: 800
+//   });
+// }

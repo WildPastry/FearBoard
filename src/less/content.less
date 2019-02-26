@@ -87,17 +87,15 @@ i {
 
 // CONTAINER
 .container-fluid {
-  margin: @big-mar;
-  padding: @main-pad;
   position: relative;
   width: 1000px;
 }
 
 // ROW & COL
 .row {
-  margin: @mad-mar;
   background: @blue-lgt;
-  border: 0.2px solid @brd;
+  border: 2px solid @brd;
+  position: relative;
 }
 
 .col {
@@ -118,34 +116,69 @@ i {
   align-items: center;
 }
 
-// BUTTON
-// .btn-section {
-//   background: @blue5;
-//   width: 60px;
-// }
+.row-mar {
+  margin: @mad-mar;
+}
 
-// .btn-warning {
-//   background: @blue-drk;
-//   width: 100px;
-//   &hover{
-//     background: @blue-lgt;
+.first-row-mar {
+  margin: @first-row-mar;
+}
 
-//   }
-// }
+.key {
+  width: 100px;
+  position: absolute;
+  left: 100px;
+  top: 189px;
+}
 
-// .btn :hover {
-//   color: @wht  !important;
-// }
-// .btn:focus,
-// .btn.focus {
-//   outline: 0;
-//   box-shadow: none !important;
-// }
+// MEDIA
+@media (max-width: 1100px) {
 
-// i :hover {
-//   color: @wht  !important;
-// }
+  .spooder {
+    height: 690px;
+    margin-top: -450px;
+    margin-left: -337.5px;
+    width: 675px;
+  }
 
-// .progressBarBot {
-//   margin-top: 50px;
-// }
+  .fear {
+    height: 468px;
+    margin-top: -234px;
+    margin-left: -375px;
+    width: 750px;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .spooder {
+    height: 345px;
+    margin-top: -225px;
+    margin-left: -168.75px;
+    width: 337.5px;
+  }
+
+  .fear {
+    height: 234px;
+    margin-top: -117px;
+    margin-left: -187.5px;
+    width: 375px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .spooder {
+    height: 258.75px;
+    margin-top: -168.75px;
+    margin-left: -126.5625px;
+    width: 253.125px;
+  }
+
+  .fear {
+    height: 175.5px;
+    margin-top: -87.75px;
+    margin-left: -140.625px;
+    width: 281.25px;
+  }
+}

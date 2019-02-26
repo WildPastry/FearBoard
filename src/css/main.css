@@ -6633,8 +6633,12 @@ body {
   color: #ffffff;
   background: #03223d;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
+}
+p {
+  letter-spacing: 0.2px;
+  font-size: 17px;
 }
 h1,
 h2 {
@@ -6642,6 +6646,15 @@ h2 {
   font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
   font-weight: 500;
+}
+h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
+  font-weight: 500;
+}
+.bold {
+  font-weight: 700;
+  color: #98c3e9;
 }
 .floatLeft {
   float: left;
@@ -6721,15 +6734,13 @@ i {
   width: 100%;
 }
 .container-fluid {
-  margin: 30px 0 30px 0;
-  padding: 20px;
   position: relative;
   width: 1000px;
 }
 .row {
-  margin: 100px 0 100px 0;
   background: #043055;
-  border: 0.2px solid #f7444454;
+  border: 2px solid #f7444454;
+  position: relative;
 }
 .col {
   padding: 0;
@@ -6745,9 +6756,78 @@ i {
   justify-content: center;
   align-items: center;
 }
+.row-mar {
+  margin: 100px 0 100px 0;
+}
+.first-row-mar {
+  margin: 80px 0 100px 0;
+}
+.key {
+  width: 100px;
+  position: absolute;
+  left: 100px;
+  top: 189px;
+}
+@media (max-width: 1100px) {
+  .spooder {
+    height: 690px;
+    margin-top: -450px;
+    margin-left: -337.5px;
+    width: 675px;
+  }
+  .fear {
+    height: 468px;
+    margin-top: -234px;
+    margin-left: -375px;
+    width: 750px;
+  }
+}
+@media (max-width: 850px) {
+  .spooder {
+    height: 345px;
+    margin-top: -225px;
+    margin-left: -168.75px;
+    width: 337.5px;
+  }
+  .fear {
+    height: 234px;
+    margin-top: -117px;
+    margin-left: -187.5px;
+    width: 375px;
+  }
+}
+@media (max-width: 500px) {
+  .spooder {
+    height: 258.75px;
+    margin-top: -168.75px;
+    margin-left: -126.5625px;
+    width: 253.125px;
+  }
+  .fear {
+    height: 175.5px;
+    margin-top: -87.75px;
+    margin-left: -140.625px;
+    width: 281.25px;
+  }
+}
 #chart1 text,
 #chart2 text,
 #chart3 text,
 #chart4 text {
   stroke: none !important;
+}
+.mouse i {
+  color: #f74444;
+}
+.spider i {
+  color: #faa178;
+}
+.shark i {
+  color: #f7697c;
+}
+.bear i {
+  color: #f07651;
+}
+.snake i {
+  color: #e998b0;
 }

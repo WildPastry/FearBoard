@@ -121,7 +121,7 @@ gulp.task('clear', function (callback) {
 
 //LOAD TASKS
 gulp.task('default',
-  gulp.series('less', 'html', 'lint', 'htmlv', 'watch')
+  gulp.series('serve', 'less', 'html', 'lint', 'htmlv', 'watch')
 );
 
 // BUILD

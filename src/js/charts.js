@@ -101,7 +101,7 @@ function drawPieChart() {
           },
           showColorCode: true
         },
-        chartArea:{left:200,top:75,width:'50%',height:'70%'},
+        // chartArea:{left:200,top:75,width:'50%',height:'70%'},
         width: 800,
         height: 400,
         fontSize: 17,

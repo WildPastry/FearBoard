@@ -4,15 +4,6 @@
 @import 'variables';
 @import 'mixins';
 
-
-// HEADER
-// .header{
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   height: 20px;
-// }
-
 // ICONS
 i {
   cursor: pointer;
@@ -39,7 +30,7 @@ i {
   height: 920px;
   left: 50%;
   margin-left: -450px;
-  margin-top: -550px;
+  margin-top: -600px;
   position: absolute;
   top: 50%;
   width: 900px;
@@ -47,10 +38,10 @@ i {
 }
 
 .spooderFill {
-  fill: @blue-drk;
+  fill: @blue19;
 
   &:hover {
-    fill: @blue19;
+    fill: @blue-blk;
   }
 }
 
@@ -96,7 +87,6 @@ i {
 
 // CONTAINER
 .container-fluid {
-  background: @blue-lgt;
   margin: @big-mar;
   padding: @main-pad;
   position: relative;
@@ -105,11 +95,21 @@ i {
 
 // ROW & COL
 .row {
-  margin: @big-mar;
+  margin: @mad-mar;
+  background: @blue-lgt;
+  border: 0.2px solid @brd;
 }
 
 .col {
   padding: @zero-pad;
+}
+
+.top-mar {
+  margin: @top-mar;
+}
+
+.bot-mar {
+  margin: @bot-mar;
 }
 
 .col-flex {

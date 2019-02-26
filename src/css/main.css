@@ -6633,13 +6633,15 @@ body {
   color: #ffffff;
   background: #03223d;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: 300;
 }
 h1,
 h2 {
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
+  font-weight: 500;
 }
 .floatLeft {
   float: left;
@@ -6661,7 +6663,7 @@ i {
   cursor: pointer;
   color: #f74444;
   font-size: 20px;
-  margin: 15px 0 0 15px;
+  margin: 15px 0 0px 15px;
 }
 .fa-home:hover,
 .fa-chart-bar:hover {
@@ -6675,17 +6677,17 @@ i {
   height: 920px;
   left: 50%;
   margin-left: -450px;
-  margin-top: -550px;
+  margin-top: -600px;
   position: absolute;
   top: 50%;
   width: 900px;
   z-index: 10;
 }
 .spooderFill {
-  fill: #021425;
+  fill: #f74444;
 }
 .spooderFill:hover {
-  fill: #f74444;
+  fill: #010f1b;
 }
 .fear {
   cursor: pointer;
@@ -6719,17 +6721,24 @@ i {
   width: 100%;
 }
 .container-fluid {
-  background: #043055;
-  margin: 50px 0 50px 0;
+  margin: 30px 0 30px 0;
   padding: 20px;
   position: relative;
   width: 1000px;
 }
 .row {
-  margin: 50px 0 50px 0;
+  margin: 100px 0 100px 0;
+  background: #043055;
+  border: 0.2px solid #f7444454;
 }
 .col {
   padding: 0;
+}
+.top-mar {
+  margin: 50px 0 30px 0;
+}
+.bot-mar {
+  margin: 30px 0 50px 0;
 }
 .col-flex {
   display: flex;

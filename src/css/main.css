@@ -6631,10 +6631,47 @@ button.close {
 body {
   position: relative;
   color: #ffffff;
-  background: #03223d;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
   font-weight: 300;
+  background: linear-gradient(270deg, #03223d, #001629);
+  background-size: 400% 400%;
+  -webkit-animation: myBG 10s ease infinite;
+  -moz-animation: myBG 10s ease infinite;
+  animation: myBG 10s ease infinite;
+}
+@-webkit-keyframes myBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes myBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes myBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 p {
   letter-spacing: 0.2px;
@@ -6652,9 +6689,20 @@ h3 {
   color: #fff;
   font-weight: 500;
 }
-.bold {
+.pieBold {
   font-weight: 700;
+  color: #faa178;
+}
+.lineBold {
+  font-weight: 700;
+  color: #f175f1;
+}
+.hbarBold {
   color: #98c3e9;
+}
+.vbarBold {
+  font-weight: 700;
+  color: #ffd164;
 }
 .floatLeft {
   float: left;
@@ -6699,9 +6747,6 @@ i {
 .spooderFill {
   fill: #f74444;
 }
-.spooderFill:hover {
-  fill: #010f1b;
-}
 .fear {
   cursor: pointer;
   height: 648px;
@@ -6714,7 +6759,7 @@ i {
   z-index: 0;
 }
 #fear {
-  fill: #010f1b;
+  fill: #001629;
 }
 .section1 {
   position: fixed;
@@ -6738,8 +6783,8 @@ i {
   width: 1000px;
 }
 .row {
-  background: #043055;
-  border: 2px solid #f7444454;
+  background: #00254680;
+  border: 1px solid #3cdff58c;
   position: relative;
 }
 .col {
@@ -6844,4 +6889,7 @@ i {
 .up i {
   color: #ffffff;
   font-size: 2em;
+}
+canvas {
+  margin: 30px 0 30px 0;
 }

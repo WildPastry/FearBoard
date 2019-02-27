@@ -77,116 +77,100 @@
             </svg>
 
         </div>
-    </div>
+    </div><!-- SECTION1 -->
 
     <!-- SECTION 2 -->
     <div id="section2" class="animsition section">
         <div class="master">
             <div class="container-fluid">
+
+                <!-- PIE CHART DIV-->
                 <div class="row first-row-mar">
-                    <div class="key">
-                        <h3>Creatures</h3>
-                        <div class="bear">
-                            <p><i class="fas fa-circle"></i>&nbsp;&nbsp;
-                                Bear</p>
-                        </div>
-                        <div class="snake">
-                            <p><i class="fas fa-circle"></i>&nbsp;&nbsp;
-                                Snake</p>
-                        </div>
-                        <div class="mouse">
-                            <p><i class="fas fa-circle"></i>&nbsp;&nbsp;
-                                Mouse</p>
-                        </div>
-                        <div class="spider">
-                            <p> <i class="fas fa-circle"></i>&nbsp;&nbsp;
-                                Spider</p>
-                        </div>
-                        <div class="shark">
-                            <p> <i class="fas fa-circle"></i>&nbsp;&nbsp;
-                                Shark</p>
-                        </div>
-                    </div>
-
-                    <!-- <div class="info">
-                        <div class="down">
-                            <i class="fas fa-chevron-circle-down"></i>&nbsp;&nbsp;
-                        </div>
-                        <div class="up">
-                            <i class="fas fa-chevron-circle-up"></i>&nbsp;&nbsp;
-                        </div>
-                    </div> -->
-
                     <h2 class="heading top-mar">Most terrifying creature</h2>
-                    <div class="col col-flex col-md-12">
-                        <div id="chart1"></div>
+
+                <!-- PIE CHART -->
+                    <div class="col col-md-1 bot-mar"></div>
+                    <div class="col col-flex col-md-10">
+                        <canvas id="pieChart"></canvas> </div>
+                    <div class="col col-md-1 bot-mar"></div>
+
+                    <!-- <div class="col col-md-3"></div> -->
+                    <div class="col col-flex col-md-12 bot-mar">
+                        <p>Which creature is the most terrifying?<span class="pieBold">&nbsp;&nbsp;results varied!</span> </p>
                     </div>
-                    <div class="col col-flex col-md-3"></div>
-                    <div class="col col-flex col-md-6">
-                        <p>A simple questionnaire, students were asked to vote for the most terrifying creature (in
-                            thier opinion...)<span class="bold">&nbsp;&nbsp;Results varied!</span> </p>
-                    </div>
-                    <div class="col col-flex col-md-3 bot-mar"></div>
+                    <!-- <div class="col col-md-3 bot-mar"></div> -->
                 </div>
+
+                <!-- LINE CHART DIV -->
                 <div class="row row-mar">
                     <h2 class="heading top-mar">Scariest country</h2>
-                    <div class="col col-flex col-md-12">
-                        <div id="chart2"></div>
+
+                    <!-- LINE CHART -->
+                    <div class="col col-md-1 bot-mar"></div>
+                    <div class="col col-flex col-md-10">
+                        <canvas id="lineChart"></canvas>
                     </div>
-                    <div class="col col-flex col-md-3"></div>
-                    <div class="col col-flex col-md-6">
-                        <p>For this survey question we asked which country would be the scariest to visit. United
-                            States are a clear winner.</p>
+                    <div class="col col-md-1 bot-mar"></div>
+
+                    <!-- <div class="col col-md-3"></div> -->
+                    <div class="col col-flex col-md-12 bot-mar">
+                        <p>Which country would be the <span class="lineBold">&nbsp;scariest to visit...&nbsp;</span> United
+                            States are a clear winner!</p>
                     </div>
-                    <div class="col col-flex col-md-3 bot-mar"></div>
+                    <!-- <div class="col col-md-3 bot-mar"></div> -->
                 </div>
+
+                <!-- H BAR CHART DIV -->
                 <div class="row row-mar">
                     <h2 class="heading top-mar">Trapped with a creature</h2>
-                    <div class="col col-flex col-md-12">
-                        <div id="chart3"></div>
+
+                    <!-- H BAR CHART -->
+                    <div class="col col-md-1 bot-mar"></div>
+                    <div class="col col-flex col-md-10">
+                        <canvas id="hbarChart"></canvas>
                     </div>
-                    <div class="col col-flex col-md-3"></div>
-                    <div class="col col-flex col-md-6">
-                        <p>How much money would you need to be given to be trapped with your terrifying creature?</p>
+                    <div class="col col-md-1 bot-mar"></div>
+
+                    <!-- <div class="col col-md-3"></div> -->
+                    <div class="col col-flex col-md-12 bot-mar">
+                        <p class="hbarBold">How much cash would you need to be given to be trapped with your terrifying creature?</p>
                     </div>
-                    <div class="col col-flex col-md-3 bot-mar"></div>
+                    <!-- <div class="col  col-md-3 bot-mar"></div> -->
                 </div>
+
+                <!-- V BAR CHART DIV -->
                 <div class="row row-mar">
                     <h2 class="heading top-mar">Scariest items</h2>
-                    <div class="col col-flex col-md-12">
-                        <div id="chart4"></div>
+
+                    <!-- V BAR CHART -->
+                    <div class="col col-md-1 bot-mar"></div>
+                    <div class="col col-flex col-md-10">
+                        <canvas id="vbarChart"></canvas>
                     </div>
-                    <div class="col col-flex col-md-3"></div>
-                    <div class="col col-flex col-md-6">
-                        <p>The last question was to rank specific items in order of fear: scariest to least scary...</p>
+                    <div class="col col-md-1 bot-mar"></div>
+
+                    <!-- <div class="col col-md-3"></div> -->
+                    <div class="col col-flex col-md-12 bot-mar">
+                        <p>Rank specific items in order of fear: <span class="vbarBold">&nbsp;5 is the scariest...</span></p>
                     </div>
-                    <div class="col col-flex col-md-3 bot-mar"></div>
+                    <!-- <div class="col col-md-3 bot-mar"></div> -->
                 </div>
-                <!-- <div class="row row-mar">
-                    <h2 class="heading top-mar">Scariest items</h2>
-                    <div class="col col-flex col-md-12">
-                        <div id="chart5"></div>
-                    </div>
-                    <div class="col col-flex col-md-3"></div>
-                    <div class="col col-flex col-md-6">
-                        <p>The last question was to rank specific items in order of fear: scariest to least scary...</p>
-                    </div>
-                    <div class="col col-flex col-md-3 bot-mar"></div>
-                </div> -->
-            </div>
-        </div>
-    </div>
+
+            </div><!-- CONTAINER FLUID -->
+        </div><!-- MASTER -->
+    </div><!-- SECTION2 -->
 
     <!-- SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="../src/framework/js/jquery-3.3.1.min.js"></script>
-    <!-- <script src="../src/framework/js/jquery-ui-1.12.1.min.js"></script> -->
     <script src="../src/framework/js/animsition.min-4.0.2.js"></script>
     <!-- <script src="js/bootstrap.min-4.1.3.js"></script> -->
     <script src="../src/framework/js/popper-1.0.0.min.js"></script>
     <!--build:js js/app.min.js -->
     <script src="js/main.js"></script>
-    <script src="js/charts.js"></script>
+    <!-- <script src="js/charts.js"></script> -->
+    <script src="js/new.js"></script>
     <!-- endbuild -->
 </body>
 

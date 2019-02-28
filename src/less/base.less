@@ -19,62 +19,116 @@
 body {
   position: relative;
   color: @wht;
-  // background: @blue;
-  // background-image: url(../img/6.jpg);
   font-family: @main-font;
   font-size: 17px;
   font-weight: 300;
-  background: linear-gradient(270deg, #03223d, #001629);
-  background-size: 400% 400%;
 
-  -webkit-animation: myBG 10s ease infinite;
-  -moz-animation: myBG 10s ease infinite;
-  animation: myBG 10s ease infinite;
+    -webkit-animation: pulsate 20s linear infinite;
+    -moz-animation: pulsate 20s linear infinite;
+    animation: pulsate 20s linear infinite;
 
-  @-webkit-keyframes myBG {
-    0% {
-      background-position: 0% 50%
-    }
+@-webkit-keyframes pulsate {
+    0% {background: @blue}
+    20% {background: @blue-drk}
+    40% {background: @blue}
+    60% {background: @blue}
+    80% {background: @blue-drk}
+    100% {background: @blue}
+}
+@-moz-keyframes pulsate {
+  0% {background: @blue}
+  20% {background: @blue-drk}
+  40% {background: @blue}
+  60% {background: @blue}
+  80% {background: @blue-drk}
+  100% {background: @blue}
+}
+@keyframes pulsate {
+  0% {background: @blue}
+  20% {background: @blue-drk}
+  40% {background: @blue}
+  60% {background: @blue}
+  80% {background: @blue-drk}
+  100% {background: @blue}
+}
+	// -webkit-animation-name: color-transition;
+	// animation-name: color-transition;
+	// -webkit-animation-duration: 25s;
+	// animation-duration: 25s;
+	// -webkit-animation-direction: alternate;
+	// animation-direction: alternate;
+	// -webkit-animation-iteration-count: infinite;
+	// animation-iteration-count: infinite;
+	// -webkit-animation-timing-function: linear;
+	// animation-timing-function: linear;
 
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-  @-moz-keyframes myBG {
-    0% {
-      background-position: 0% 50%
-    }
-
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-  @keyframes myBG {
-    0% {
-      background-position: 0% 50%
-    }
-
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0% 50%
-    }
-  }
+  // @-webkit-keyframes color-transition {
+  //   0% {
+  //     background-color: #4C6085;
+  //     border-color: #4C6085;
+  //   }
+  //   33% {
+  //     background-color: #80D39B;
+  //     border-color: #80D39B;
+  //   }
+  //   66% {
+  //     background-color: #BE3E82;
+  //     border-color: #BE3E82;
+  //   }
+  //   100% {
+  //     background-color: #4C6085;
+  //     border-color: #4C6085;
+  //   }
+  // }
+  
+  // @keyframes color-transition {
+  //   0% {
+  //     background-color: #4C6085;
+  //     border-color: #4C6085;
+  //   }
+  //   33% {
+  //     background-color: #80D39B;
+  //     border-color: #80D39B;
+  //   }
+  //   66% {
+  //     background-color: #BE3E82;
+  //     border-color: #BE3E82;
+  //   }
+  //   100% {
+  //     background-color: #4C6085;
+  //     border-color: #4C6085;
+  //   }
+  // }
 }
 
+  // background: linear-gradient(100deg, #03223d, #001629);
+  // background-size: 400% 400%;
+  // -webkit-animation: myBG 14s ease infinite;
+  // -moz-animation: myBG 14s ease infinite;
+  // animation: myBG 14s ease infinite;
+
+  // -webkit-animation: myBG 6s ease infinite;
+  // -moz-animation: myBG 6s ease infinite;
+  // animation: myBG 6s ease infinite;
+  
+  // @-webkit-keyframes myBG {
+  //     0%{background-position:5% 0%}
+  //     50%{background-position:96% 100%}
+  //     100%{background-position:5% 0%}
+  // }
+  // @-moz-keyframes myBG {
+  //     0%{background-position:5% 0%}
+  //     50%{background-position:96% 100%}
+  //     100%{background-position:5% 0%}
+  // }
+  // @keyframes myBG {
+  //     0%{background-position:5% 0%}
+  //     50%{background-position:96% 100%}
+  //     100%{background-position:5% 0%}
+  // }
+
 p {
+  text-align: center;
   letter-spacing: 0.2px;
   font-size: 17px;
 }
@@ -83,33 +137,32 @@ h1,
 h2 {
   text-align: center;
   font-family: @main-font;
-  color: #fff;
+  color: @wht;
   font-weight: 500;
 }
 
 h3 {
   font-family: @main-font;
-  color: #fff;
+  color: @wht;
   font-weight: 500;
 }
 
 .pieBold {
-  font-weight: 700;
+  font-weight: 500;
   color: @pie2;
 }
 
 .lineBold {
-  font-weight: 700;
+  font-weight: 500;
   color: @line1;
 }
 
 .hbarBold {
-  // font-weight: 700;
-  color: @blue5;
+  color: @hbar1;
 }
 
 .vbarBold {
-  font-weight: 700;
+  font-weight: 500;
   color: @vbar5;
 }
 

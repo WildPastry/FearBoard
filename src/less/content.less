@@ -5,21 +5,21 @@
 @import 'mixins';
 
 // ICONS
-i {
-  cursor: pointer;
-}
+// i {
+//   cursor: pointer;
+// }
 
-.fa-home,
-.fa-chart-bar {
-  cursor: pointer;
-  color: @blue19-drk;
-  font-size: 20px;
-  margin: @sml-mar;
+// .fa-home,
+// .fa-chart-bar {
+//   cursor: pointer;
+//   color: @red;
+//   font-size: 20px;
+//   margin: @icon-mar;
 
-  &:hover {
-    color: @wht;
-  }
-}
+//   &:hover {
+//     color: @wht;
+//   }
+// }
 
 // SPOODER
 .spooder {
@@ -38,10 +38,10 @@ i {
 }
 
 .spooderFill {
-  fill: @blue19-drk;
+  fill: @red;
 
   // &:hover {
-  //   fill: @blue-blk;
+  //   fill: @blk;
   // }
 }
 
@@ -59,12 +59,11 @@ i {
 }
 
 #fear {
-  fill: @blue-d;
+  fill: @blue-drk;
 }
 
 // SECTIONS
 .section1 {
-  // background: @blue;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -88,54 +87,29 @@ i {
 // CONTAINER
 .container-fluid {
   position: relative;
-  width: 1000px;
+  max-width: 900px;
+    // padding: @col-pad;
+  width: 95%;
 }
 
 // ROW & COL
 .row {
-  background: @blue1-drk;
-  border: 1px solid @blue23;
+  // background: @blue-drk-t;
+  border: 1px solid @blue-lgt;
   position: relative;
 }
 
 .col {
-  padding: @zero-pad;
+  padding: @col-pad;
 }
 
-.top-mar {
-  margin: @top-mar;
-}
-
-.bot-mar {
-  margin: @bot-mar;
-}
-
-.col-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// MARGINS
+.mar {
+  margin: @mar;
 }
 
 .row-mar {
-  margin: @mad-mar;
-}
-
-.first-row-mar {
-  margin: @first-row-mar;
-}
-
-.key {
-  width: 100px;
-  position: absolute;
-  left: 100px;
-  top: 189px;
-}
-
-.info {
-  width: 100px;
-  position: absolute;
-  right: 100px;
-  top: 189px;
+  margin: @row-mar;
 }
 
 // MEDIA

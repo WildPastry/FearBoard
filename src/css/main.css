@@ -6634,46 +6634,72 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
   font-weight: 300;
-  background: linear-gradient(270deg, #03223d, #001629);
-  background-size: 400% 400%;
-  -webkit-animation: myBG 10s ease infinite;
-  -moz-animation: myBG 10s ease infinite;
-  animation: myBG 10s ease infinite;
+  -webkit-animation: pulsate 20s linear infinite;
+  -moz-animation: pulsate 20s linear infinite;
+  animation: pulsate 20s linear infinite;
 }
-@-webkit-keyframes myBG {
+@-webkit-keyframes pulsate {
   0% {
-    background-position: 0% 50%;
+    background: #03223d;
   }
-  50% {
-    background-position: 100% 50%;
+  20% {
+    background: #001629;
+  }
+  40% {
+    background: #03223d;
+  }
+  60% {
+    background: #03223d;
+  }
+  80% {
+    background: #001629;
   }
   100% {
-    background-position: 0% 50%;
+    background: #03223d;
   }
 }
-@-moz-keyframes myBG {
+@-moz-keyframes pulsate {
   0% {
-    background-position: 0% 50%;
+    background: #03223d;
   }
-  50% {
-    background-position: 100% 50%;
+  20% {
+    background: #001629;
+  }
+  40% {
+    background: #03223d;
+  }
+  60% {
+    background: #03223d;
+  }
+  80% {
+    background: #001629;
   }
   100% {
-    background-position: 0% 50%;
+    background: #03223d;
   }
 }
-@keyframes myBG {
+@keyframes pulsate {
   0% {
-    background-position: 0% 50%;
+    background: #03223d;
   }
-  50% {
-    background-position: 100% 50%;
+  20% {
+    background: #001629;
+  }
+  40% {
+    background: #03223d;
+  }
+  60% {
+    background: #03223d;
+  }
+  80% {
+    background: #001629;
   }
   100% {
-    background-position: 0% 50%;
+    background: #03223d;
   }
 }
 p {
+  text-align: center;
   letter-spacing: 0.2px;
   font-size: 17px;
 }
@@ -6681,27 +6707,27 @@ h1,
 h2 {
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
 }
 h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
 }
 .pieBold {
-  font-weight: 700;
+  font-weight: 500;
   color: #faa178;
 }
 .lineBold {
-  font-weight: 700;
+  font-weight: 500;
   color: #f175f1;
 }
 .hbarBold {
-  color: #98c3e9;
+  color: #f56969;
 }
 .vbarBold {
-  font-weight: 700;
+  font-weight: 500;
   color: #ffd164;
 }
 .floatLeft {
@@ -6715,20 +6741,6 @@ h3 {
 }
 .floatRight::after {
   clear: right;
-}
-i {
-  cursor: pointer;
-}
-.fa-home,
-.fa-chart-bar {
-  cursor: pointer;
-  color: #f74444c5;
-  font-size: 20px;
-  margin: 15px 0 0px 15px;
-}
-.fa-home:hover,
-.fa-chart-bar:hover {
-  color: #ffffff;
 }
 .spooder {
   animation-delay: 1s;
@@ -6745,7 +6757,7 @@ i {
   z-index: 10;
 }
 .spooderFill {
-  fill: #f74444c5;
+  fill: #f74444;
 }
 .fear {
   cursor: pointer;
@@ -6780,44 +6792,21 @@ i {
 }
 .container-fluid {
   position: relative;
-  width: 1000px;
+  max-width: 900px;
+  width: 95%;
 }
 .row {
-  background: #00254680;
-  border: 1px solid #3cdff58c;
+  border: 1px solid #0966b7;
   position: relative;
 }
 .col {
-  padding: 0;
+  padding: 0 25px 0 25px;
 }
-.top-mar {
-  margin: 50px 0 30px 0;
-}
-.bot-mar {
-  margin: 30px 0 50px 0;
-}
-.col-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mar {
+  margin: 20px 0 20px 0;
 }
 .row-mar {
   margin: 100px 0 100px 0;
-}
-.first-row-mar {
-  margin: 80px 0 100px 0;
-}
-.key {
-  width: 100px;
-  position: absolute;
-  left: 100px;
-  top: 189px;
-}
-.info {
-  width: 100px;
-  position: absolute;
-  right: 100px;
-  top: 189px;
 }
 @media (max-width: 1100px) {
   .spooder {
@@ -6861,12 +6850,6 @@ i {
     width: 281.25px;
   }
 }
-#chart1 text,
-#chart2 text,
-#chart3 text,
-#chart4 text {
-  stroke: none !important;
-}
 .mouse i {
   color: #f74444;
 }
@@ -6881,14 +6864,6 @@ i {
 }
 .snake i {
   color: #e998b0;
-}
-.down i {
-  color: #ffffff;
-  font-size: 2em;
-}
-.up i {
-  color: #ffffff;
-  font-size: 2em;
 }
 canvas {
   margin: 30px 0 30px 0;

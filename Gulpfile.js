@@ -1,7 +1,7 @@
 // INSTALL PLUGINS
 var gulp = require('gulp');
 concat = require('gulp-concat'),
-  less = require('gulp-less');
+less = require('gulp-less');
 livereload = require('gulp-livereload');
 connect = require('gulp-connect');
 useref = require('gulp-useref');
@@ -20,7 +20,8 @@ gulp.task('serve', function (event) {
   connect.server({
     root: '',
     port: 1988,
-    host: '192.168.33.10',
+    // host: '192.168.33.10', //ENABLE FOR DIFFERENT LOCATIONS + ADD SCRIPT FILE:
+    // <script src="http://192.168.33.10:35729/livereload.js"></script>
     livereload: true,
   });
   event();
@@ -56,7 +57,7 @@ gulp.task('htmlv', function () {
 
 // JSHINT
 gulp.task('lint', function () {
-  return gulp.src('src/js/main.js')
+  return gulp.src('src/js/**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(connect.reload());
@@ -85,13 +86,13 @@ gulp.task('fonts', function () {
 
 //FRAMEWORK JS + CSS BUILD
 gulp.task('frameworkjs', function () {
-  return gulp.src('src/framework/js/**/*')
+  return gulp.src('src/framework/js/**/*.js')
     .pipe(gulp.dest('dist/framework/js'))
 });
 
 gulp.task('frameworkcss', function () {
-  return gulp.src('src/framework/css/**/*')
-    .pipe(gulp.dest('dist//framework/css'))
+  return gulp.src('src/framework/css/**/*.css')
+    .pipe(gulp.dest('dist/framework/css'))
 });
 
 //COMPILERS

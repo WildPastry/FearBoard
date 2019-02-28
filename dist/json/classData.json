@@ -1,0 +1,91 @@
+[{
+    "age": 26,
+    "sex": "female",
+    "country": "China",
+    "creature": "Mouse",
+    "amount": 100,
+    "item": "Nachos",
+    "name": "Chloe"
+  },
+  {
+    "age": 26,
+    "sex": "female",
+    "country": "Laos",
+    "creature": "Spider",
+    "amount": 10,
+    "item": "Public Speaking",
+    "name": "Lisa"
+  },
+  {
+    "age": 34,
+    "sex": "female",
+    "country": "Africa",
+    "creature": "Snake",
+    "amount": 50,
+    "item": "Public Speaking",
+    "name": "Han"
+  },
+  {
+    "age": 20,
+    "sex": "female",
+    "country": "United States",
+    "creature": "Shark",
+    "amount": 100,
+    "item": "Dentist",
+    "name": "Lexi"
+  },
+  {
+    "age": 34,
+    "sex": "male",
+    "country": "Syria",
+    "nachos": "5",
+    "creature": "Shark",
+    "amount": 30,
+    "item": "Dentist",
+    "name": "Mike"
+  },
+  {
+    "age": 24,
+    "sex": "male",
+    "country": "United States",
+    "creature": "Shark",
+    "amount": 10,
+    "item": "Swimming",
+    "name": "Joe"
+  },
+  {
+    "age": 34,
+    "sex": "male",
+    "country": "United States",
+    "creature": "Bear",
+    "amount": 50,
+    "item": "Public Speaking",
+    "name": "Dan"
+  },
+  {
+    "age": 38,
+    "sex": "male",
+    "country": "Bulgaria",
+    "creature": "Spider",
+    "amount": 70,
+    "item": "Public Speaking",
+    "name": "Yoon"
+  }, {
+    "age": 20,
+    "sex": "male",
+    "country": "Turkey",
+    "creature": "Shark",
+    "amount": 50,
+    "item": "Public Speaking",
+    "name": "Sam"
+  },
+  {
+    "age": 20,
+    "sex": "female",
+    "country": "Africa",
+    "creature": "Shark",
+    "amount": 100,
+    "item": "Heights",
+    "name": "Maria"
+  }
+]

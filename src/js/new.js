@@ -35,7 +35,7 @@ var lineChart = new Chart(chart2, {
   type: 'line',
   data: {
     // labels: ["Chloe", "Lisa", "Hannah", "Lexi", "Mike", "Joe", "Dan", "Yoon", "Sam", "Maria"],
-    labels: ["China", "U.S", "Laos", "Africa", "Syria", "Bulgaria", "Turkey"],
+    labels: ["China", "U.S", "Laos", "Zimbabwe", "Syria", "Bulgaria", "Turkey"],
     datasets: [{
         label: '# of Votes',
         data: [2, 3, 1, 1, 1, 1, 1],

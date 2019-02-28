@@ -6722,7 +6722,7 @@ i {
 .fa-home,
 .fa-chart-bar {
   cursor: pointer;
-  color: #f74444;
+  color: #f74444c5;
   font-size: 20px;
   margin: 15px 0 0px 15px;
 }
@@ -6745,7 +6745,7 @@ i {
   z-index: 10;
 }
 .spooderFill {
-  fill: #f74444;
+  fill: #f74444c5;
 }
 .fear {
   cursor: pointer;

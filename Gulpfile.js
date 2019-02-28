@@ -1,7 +1,7 @@
 // INSTALL PLUGINS
 var gulp = require('gulp');
 concat = require('gulp-concat'),
-less = require('gulp-less');
+  less = require('gulp-less');
 livereload = require('gulp-livereload');
 connect = require('gulp-connect');
 useref = require('gulp-useref');
@@ -20,7 +20,8 @@ gulp.task('serve', function (event) {
   connect.server({
     root: '',
     port: 1988,
-    livereload: true
+    host: '192.168.33.10',
+    livereload: true,
   });
   event();
 });
@@ -28,10 +29,12 @@ gulp.task('serve', function (event) {
 // LESS
 gulp.task('less', function () {
   return gulp.src('src/less/**/*.less')
-  .pipe(concat('main'))
-    .pipe(less({  paths: [
-            './node_modules/bootstrap-less'
-        ]}))
+    .pipe(concat('main'))
+    .pipe(less({
+      paths: [
+        './node_modules/bootstrap-less'
+      ]
+    }))
     .pipe(gulp.dest('src/css/'))
     .pipe(connect.reload());
 });
@@ -102,9 +105,16 @@ gulp.task('useref', function () {
 
 //WATCHERS
 gulp.task('watch', function (event) {
-  gulp.watch('src/less/**/*.less', gulp.series('less'));
-  gulp.watch('src/*.html', gulp.series('html'));
-  gulp.watch('src/js/*.js', gulp.series('lint'));
+  livereload.listen();
+  gulp.watch('src/less/**/*.less', {
+    usePolling: true
+  }, gulp.series('less'));
+  gulp.watch('src/*.html', {
+    usePolling: true
+  }, gulp.series('html'));
+  gulp.watch('src/js/*.js', {
+    usePolling: true
+  }, gulp.series('lint'));
   event();
 });
 

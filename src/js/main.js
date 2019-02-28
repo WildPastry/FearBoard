@@ -1,10 +1,10 @@
 console.log('Javascript connected...');
 
 // EVENT LISTENERS
-// document.getElementById('spooder').addEventListener('click', section2);
-// document.getElementById('fear').addEventListener('click', section2);
-// document.getElementById('charts').addEventListener('click', section2);
-// document.getElementById('home').addEventListener('click', section1);
+document.getElementById('spooder').addEventListener('click', section2);
+document.getElementById('fear').addEventListener('click', section2);
+document.getElementById('charts').addEventListener('click', section2);
+document.getElementById('home').addEventListener('click', section1);
 
 // PAGE ANIMATION
 function section1() {

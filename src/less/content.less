@@ -4,22 +4,30 @@
 @import 'variables';
 @import 'mixins';
 
+// HEADER
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
 // ICONS
-// i {
-//   cursor: pointer;
-// }
+i {
+  cursor: pointer;
+}
 
-// .fa-home,
-// .fa-chart-bar {
-//   cursor: pointer;
-//   color: @red;
-//   font-size: 20px;
-//   margin: @icon-mar;
+.fa-home,
+.fa-chart-bar {
+  cursor: pointer;
+  color: @red;
+  font-size: 20px;
+  margin: @icon-mar;
 
-//   &:hover {
-//     color: @wht;
-//   }
-// }
+  &:hover {
+    color: @wht;
+  }
+}
 
 // SPOODER
 .spooder {
@@ -30,7 +38,7 @@
   height: 920px;
   left: 50%;
   margin-left: -450px;
-  margin-top: -600px;
+  margin-top: -560px;
   position: absolute;
   top: 50%;
   width: 900px;
@@ -88,13 +96,11 @@
 .container-fluid {
   position: relative;
   max-width: 900px;
-    // padding: @col-pad;
   width: 95%;
 }
 
 // ROW & COL
 .row {
-  // background: @blue-drk-t;
   border: 1px solid @blue-lgt;
   position: relative;
 }
@@ -110,6 +116,15 @@
 
 .row-mar {
   margin: @row-mar;
+}
+
+// COPYRIGHT
+.copyright {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: @copy-mar;
+  z-index: 100;
 }
 
 // MEDIA

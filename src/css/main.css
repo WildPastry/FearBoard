@@ -6642,17 +6642,26 @@ body {
   0% {
     background: #03223d;
   }
-  20% {
+  12.5% {
+    background: #03243b;
+  }
+  25% {
+    background: #022035;
+  }
+  37.5% {
+    background: #011a2f;
+  }
+  50% {
     background: #001629;
   }
-  40% {
-    background: #03223d;
+  62.5% {
+    background: #011a2f;
   }
-  60% {
-    background: #03223d;
+  75% {
+    background: #022035;
   }
-  80% {
-    background: #001629;
+  87.5% {
+    background: #03243b;
   }
   100% {
     background: #03223d;
@@ -6662,17 +6671,26 @@ body {
   0% {
     background: #03223d;
   }
-  20% {
+  12.5% {
+    background: #03243b;
+  }
+  25% {
+    background: #022035;
+  }
+  37.5% {
+    background: #011a2f;
+  }
+  50% {
     background: #001629;
   }
-  40% {
-    background: #03223d;
+  62.5% {
+    background: #011a2f;
   }
-  60% {
-    background: #03223d;
+  75% {
+    background: #022035;
   }
-  80% {
-    background: #001629;
+  87.5% {
+    background: #03243b;
   }
   100% {
     background: #03223d;
@@ -6682,21 +6700,39 @@ body {
   0% {
     background: #03223d;
   }
-  20% {
+  12.5% {
+    background: #03243b;
+  }
+  25% {
+    background: #022035;
+  }
+  37.5% {
+    background: #011a2f;
+  }
+  50% {
     background: #001629;
   }
-  40% {
-    background: #03223d;
+  62.5% {
+    background: #011a2f;
   }
-  60% {
-    background: #03223d;
+  75% {
+    background: #022035;
   }
-  80% {
-    background: #001629;
+  87.5% {
+    background: #03243b;
   }
   100% {
     background: #03223d;
   }
+}
+a {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #f74444;
+  font-weight: 300;
+}
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 p {
   text-align: center;
@@ -6704,13 +6740,9 @@ p {
   font-size: 17px;
 }
 h1,
-h2 {
-  text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #ffffff;
-  font-weight: 500;
-}
+h2,
 h3 {
+  text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   color: #ffffff;
   font-weight: 500;
@@ -6742,6 +6774,26 @@ h3 {
 .floatRight::after {
   clear: right;
 }
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+i {
+  cursor: pointer;
+}
+.fa-home,
+.fa-chart-bar {
+  cursor: pointer;
+  color: #f74444;
+  font-size: 20px;
+  margin: 15px 0 0 15px;
+}
+.fa-home:hover,
+.fa-chart-bar:hover {
+  color: #ffffff;
+}
 .spooder {
   animation-delay: 1s;
   animation-duration: 1s;
@@ -6750,7 +6802,7 @@ h3 {
   height: 920px;
   left: 50%;
   margin-left: -450px;
-  margin-top: -600px;
+  margin-top: -560px;
   position: absolute;
   top: 50%;
   width: 900px;
@@ -6806,7 +6858,14 @@ h3 {
   margin: 20px 0 20px 0;
 }
 .row-mar {
-  margin: 100px 0 100px 0;
+  margin: 50px 0 50px 0;
+}
+.copyright {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px 15px 0 0;
+  z-index: 100;
 }
 @media (max-width: 1100px) {
   .spooder {

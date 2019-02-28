@@ -23,109 +23,135 @@ body {
   font-size: 17px;
   font-weight: 300;
 
-    -webkit-animation: pulsate 20s linear infinite;
-    -moz-animation: pulsate 20s linear infinite;
-    animation: pulsate 20s linear infinite;
+  -webkit-animation: pulsate 20s linear infinite;
+  -moz-animation: pulsate 20s linear infinite;
+  animation: pulsate 20s linear infinite;
 
-@-webkit-keyframes pulsate {
-    0% {background: @blue}
-    20% {background: @blue-drk}
-    40% {background: @blue}
-    60% {background: @blue}
-    80% {background: @blue-drk}
-    100% {background: @blue}
-}
-@-moz-keyframes pulsate {
-  0% {background: @blue}
-  20% {background: @blue-drk}
-  40% {background: @blue}
-  60% {background: @blue}
-  80% {background: @blue-drk}
-  100% {background: @blue}
-}
-@keyframes pulsate {
-  0% {background: @blue}
-  20% {background: @blue-drk}
-  40% {background: @blue}
-  60% {background: @blue}
-  80% {background: @blue-drk}
-  100% {background: @blue}
-}
-	// -webkit-animation-name: color-transition;
-	// animation-name: color-transition;
-	// -webkit-animation-duration: 25s;
-	// animation-duration: 25s;
-	// -webkit-animation-direction: alternate;
-	// animation-direction: alternate;
-	// -webkit-animation-iteration-count: infinite;
-	// animation-iteration-count: infinite;
-	// -webkit-animation-timing-function: linear;
-	// animation-timing-function: linear;
+  @-webkit-keyframes pulsate {
+    0% {
+      background: @blue
+    }
 
-  // @-webkit-keyframes color-transition {
-  //   0% {
-  //     background-color: #4C6085;
-  //     border-color: #4C6085;
-  //   }
-  //   33% {
-  //     background-color: #80D39B;
-  //     border-color: #80D39B;
-  //   }
-  //   66% {
-  //     background-color: #BE3E82;
-  //     border-color: #BE3E82;
-  //   }
-  //   100% {
-  //     background-color: #4C6085;
-  //     border-color: #4C6085;
-  //   }
-  // }
-  
-  // @keyframes color-transition {
-  //   0% {
-  //     background-color: #4C6085;
-  //     border-color: #4C6085;
-  //   }
-  //   33% {
-  //     background-color: #80D39B;
-  //     border-color: #80D39B;
-  //   }
-  //   66% {
-  //     background-color: #BE3E82;
-  //     border-color: #BE3E82;
-  //   }
-  //   100% {
-  //     background-color: #4C6085;
-  //     border-color: #4C6085;
-  //   }
-  // }
+    12.5% {
+      background: @grad2
+    }
+
+    25% {
+      background: @grad3
+    }
+
+    37.5% {
+      background: @grad4
+    }
+
+    50% {
+      background: @blue-drk
+    }
+
+    62.5% {
+      background: @grad4
+    }
+
+    75% {
+      background: @grad3
+    }
+
+    87.5% {
+      background: @grad2
+    }
+
+    100% {
+      background: @blue
+    }
+  }
+
+  @-moz-keyframes pulsate {
+    0% {
+      background: @blue
+    }
+
+    12.5% {
+      background: @grad2
+    }
+
+    25% {
+      background: @grad3
+    }
+
+    37.5% {
+      background: @grad4
+    }
+
+    50% {
+      background: @blue-drk
+    }
+
+    62.5% {
+      background: @grad4
+    }
+
+    75% {
+      background: @grad3
+    }
+
+    87.5% {
+      background: @grad2
+    }
+
+    100% {
+      background: @blue
+    }
+  }
+
+  @keyframes pulsate {
+    0% {
+      background: @blue
+    }
+
+    12.5% {
+      background: @grad2
+    }
+
+    25% {
+      background: @grad3
+    }
+
+    37.5% {
+      background: @grad4
+    }
+
+    50% {
+      background: @blue-drk
+    }
+
+    62.5% {
+      background: @grad4
+    }
+
+    75% {
+      background: @grad3
+    }
+
+    87.5% {
+      background: @grad2
+    }
+
+    100% {
+      background: @blue
+    }
+  }
 }
 
-  // background: linear-gradient(100deg, #03223d, #001629);
-  // background-size: 400% 400%;
-  // -webkit-animation: myBG 14s ease infinite;
-  // -moz-animation: myBG 14s ease infinite;
-  // animation: myBG 14s ease infinite;
+a {
+  font-family: @main-font;
+  color: @red;
+  font-weight: 300;
 
-  // -webkit-animation: myBG 6s ease infinite;
-  // -moz-animation: myBG 6s ease infinite;
-  // animation: myBG 6s ease infinite;
-  
-  // @-webkit-keyframes myBG {
-  //     0%{background-position:5% 0%}
-  //     50%{background-position:96% 100%}
-  //     100%{background-position:5% 0%}
-  // }
-  // @-moz-keyframes myBG {
-  //     0%{background-position:5% 0%}
-  //     50%{background-position:96% 100%}
-  //     100%{background-position:5% 0%}
-  // }
-  // @keyframes myBG {
-  //     0%{background-position:5% 0%}
-  //     50%{background-position:96% 100%}
-  //     100%{background-position:5% 0%}
-  // }
+  &:hover {
+    color: @wht;
+    text-decoration: none;
+  }
+}
 
 p {
   text-align: center;
@@ -134,14 +160,9 @@ p {
 }
 
 h1,
-h2 {
-  text-align: center;
-  font-family: @main-font;
-  color: @wht;
-  font-weight: 500;
-}
-
+h2,
 h3 {
+  text-align: center;
   font-family: @main-font;
   color: @wht;
   font-weight: 500;

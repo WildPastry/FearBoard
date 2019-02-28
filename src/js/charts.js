@@ -70,7 +70,7 @@ $.ajax({
     var syria = 0;
     var bulgaria = 0;
     var turkey = 0;
-    for (var i = 0; i < classData.length; i++) {
+    for (i = 0; i < classData.length; i++) {
       if (classData[i].country == "China") china++;
       if (classData[i].country == "United States") us++;
       if (classData[i].country == "Laos") laos++;
@@ -78,7 +78,7 @@ $.ajax({
       if (classData[i].country == "Syria") syria++;
       if (classData[i].country == "Bulgaria") bulgaria++;
       if (classData[i].country == "Turkey") turkey++;
-    };
+    }
 
     console.log("Line chart data loaded...");
     console.log(china, us, laos, africa, syria, bulgaria, turkey);
@@ -132,14 +132,14 @@ $.ajax({
     var fifty = 0;
     var seventy = 0;
     var hundy = 0;
-    for (var i = 0; i < classData.length; i++) {
+    for (i = 0; i < classData.length; i++) {
       if (classData[i].amount == "10") ten++;
       if (classData[i].amount == "20") twenty++;
       if (classData[i].amount == "30") thirty++;
       if (classData[i].amount == "50") fifty++;
       if (classData[i].amount == "70") seventy++;
       if (classData[i].amount == "100") hundy++;
-    };
+    }
 
     console.log("Horizontal Bar chart data loaded...");
     console.log(ten, twenty, thirty, fifty, seventy, hundy);
@@ -189,13 +189,13 @@ $.ajax({
     var heights = 0;
     var swimming = 0;
     var dentist = 0;
-    for (var i = 0; i < classData.length; i++) {
+    for (i = 0; i < classData.length; i++) {
       if (classData[i].item == "Nachos") nachos++;
       if (classData[i].item == "Public Speaking") public_speaking++;
       if (classData[i].item == "Heights") heights++;
       if (classData[i].item == "Swimming") swimming++;
       if (classData[i].item == "Dentist") dentist++;
-    };
+    }
     console.log("Vertical Bar chart data loaded...");
     console.log(nachos, public_speaking, heights, swimming, dentist);
 

@@ -70,7 +70,7 @@ gulp.task('script', function () {
 });
 
 //IMAGE BUILD
-gulp.task('images', function () {
+gulp.task('img', function () {
   return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
     .pipe(cache(imagemin({
       interlaced: true
@@ -79,7 +79,7 @@ gulp.task('images', function () {
 });
 
 //FONT BUILD
-gulp.task('fonts', function () {
+gulp.task('font', function () {
   return gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
 });
@@ -92,12 +92,12 @@ gulp.task('json', function () {
 
 //FRAMEWORK JS + CSS BUILD
 gulp.task('frameworkjs', function () {
-  return gulp.src('framework/js/**/*.js')
+  return gulp.src('src/framework/js/**/*.js')
     .pipe(gulp.dest('dist/framework/js'))
 });
 
 gulp.task('frameworkcss', function () {
-  return gulp.src('framework/css/**/*.css')
+  return gulp.src('src/framework/css/**/*.css')
     .pipe(gulp.dest('dist/framework/css'))
 });
 
@@ -146,6 +146,6 @@ gulp.task(
   'build',
   gulp.series(
     'clean',
-    gulp.parallel('less', 'useref', 'images', 'script', 'fonts', 'json', 'frameworkjs', 'frameworkcss')
+    gulp.parallel('less', 'useref', 'img', 'script', 'font', 'json', 'frameworkjs', 'frameworkcss')
   )
 );

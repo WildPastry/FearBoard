@@ -6792,7 +6792,7 @@ i {
 }
 .fa-home:hover,
 .fa-chart-bar:hover {
-  color: #ffffff;
+  color: #f74444;
 }
 .spooder {
   animation-delay: 1s;
@@ -6809,7 +6809,7 @@ i {
   z-index: 10;
 }
 .spooderFill {
-  fill: #ffffff;
+  fill: #f74444;
 }
 .fear {
   cursor: pointer;

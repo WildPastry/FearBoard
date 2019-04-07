@@ -1,5 +1,7 @@
 ## Fear Board
 
+[Live site](http://www.fear.mykdesign.co.nz/)
+
 Class project work. Sources include:
     
     CSS:

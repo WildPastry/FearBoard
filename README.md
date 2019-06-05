@@ -6,6 +6,7 @@ Class project work. Sources include:
     
     CSS:
     bootstrap
+    less
 
     ICONS:
     fontawesome

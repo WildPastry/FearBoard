@@ -1,6 +1,6 @@
 ## Fear Board
 
-[Live site](http://www.fear.mykdesign.co.nz/)
+[Live site](http://www.fear.mikeparker.co.nz/)
 
 Class project work. Sources include:
     

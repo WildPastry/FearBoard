@@ -60,7 +60,7 @@ $.ajax({
           position: 'bottom',
         }
       }
-    }); //PIE CHART
+    }); // PIE CHART
 
     // LINE CHART
     var china = 0;
@@ -123,7 +123,7 @@ $.ajax({
           }]
         }
       }
-    }); //LINE CHART
+    }); // LINE CHART
 
     // H BAR CHART
     var ten = 0;
@@ -181,7 +181,7 @@ $.ajax({
           }]
         }
       }
-    }); //H BAR CHART
+    }); // H BAR CHART
 
     // V BAR CHART
     var nachos = 0;
@@ -257,9 +257,9 @@ $.ajax({
           }]
         }
       }
-    }); //V BAR CHART
+    }); // V BAR CHART
 
-  }, //SUCCSESS
+  }, // SUCCSESS
 
   // ERROR
   error: function (error) {
@@ -267,4 +267,4 @@ $.ajax({
     console.log("Error loading data...");
   } //ERROR
 
-}); //AJAX
+}); // AJAX

@@ -1,4 +1,5 @@
 /src/production
 /node_modules
 /config.json
+/dist
 .DS_Store

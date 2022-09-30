@@ -1,7 +1,5 @@
 ## Fear Board
 
-[Live site](http://www.fear.mikeparker.co.nz/)
-
 Class project work. Sources include:
     
     CSS:
@@ -25,4 +23,4 @@ To display data in a variety of ways.
 
 ## Copyright
 
-Design © Michael Parker 2019
+Design © Mike Parker 2019

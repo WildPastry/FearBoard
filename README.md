@@ -1,4 +1,4 @@
-# Fear Board
+# FearBoard
 
 Class project work. Sources include:
     

@@ -1,4 +1,4 @@
-## Fear Board
+# Fear Board
 
 Class project work. Sources include:
     
@@ -19,7 +19,7 @@ Class project work. Sources include:
 
 ## Project
 
-To display data in a variety of ways.
+To display data in a variety of ways
 
 ## Copyright
 
